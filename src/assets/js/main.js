@@ -5,11 +5,11 @@ $(document).ready(function() {
     $('content').addClass('krassInefade');
     $("#triangle-up, #triangle-down").delay(1500).fadeOut();
     $("#title").fadeOut(500);
-    $("#button").addClass("toMenu");
-    $("#button").text('+');
-    setTimeout(function() {
+/*    $("#button").addClass("toMenu");
+    $("#button").text('Go Back to Login');*/
+/*    setTimeout(function() {
       $("#button").attr("id", "menu");
-    }, 1);
+    }, 1);*/
   });
 
   $("#menuClose, #menuContent a").click(function() {

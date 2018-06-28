@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { environment } from '../../../environments/environment';
 
@@ -11,7 +12,8 @@ import 'rxjs/add/observable/throw';
 export class AuthService {
 
   private apiBaseUrl: string = environment.apiBaseUrl;
-  constructor(public http: Http) { }
+
+  constructor(public http: HttpClient) { }
 
   /**
    * Login a new user
@@ -25,6 +27,19 @@ export class AuthService {
   }
 
   /**
+   * Register a new user
+   * @param userData - register a new user
+   *
+   * @return {Object}
+   */
+  register(userData) {
+    return this.http
+      .post(`${this.apiBaseUrl}/auth/register`, userData)
+      .map(this.handleResponse)
+      .catch(this.handleError);
+  }
+
+  /**
    * Handle response from server.
    *
    * @param {Response} res - response object
@@ -32,8 +47,8 @@ export class AuthService {
    * @returns {object} - response object
    *
    */
-  handleResponse(res: Response) {
-    const response = res.json();
+  handleResponse(res: HttpResponse<Object>) {
+    const response = res;
     return response || {};
   }
 
@@ -44,10 +59,9 @@ export class AuthService {
    *
    * @return {Observable} ErrorObservable
    */
-  handleError(error: Response | any) {
-    const message = error.json().message;
-    return Observable.throw(message).toPromise()
-    .catch(() => {});
+  handleError(error: HttpResponse<Object> | any ) {
+    const message = error.error;
+    return Observable.throw(message);
   }
 
 }

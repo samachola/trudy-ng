@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/Http';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpModule } from '@angular/http';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './components/login/login.component';
@@ -10,20 +12,33 @@ import { FooterComponent } from './components/widgets/footer/footer.component';
 import { RegisterComponent } from './components/register/register.component';
 
 import { AuthService } from './services/auth/auth.service';
+import { LandingComponent } from './components/landing/landing.component';
+import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
+import { MenuComponent } from './components/admin/widgets/menu/menu.component';
+import { HomeComponent } from './components/home/home.component';
 
-
+const routes: Routes = [
+ // { path: '', component: HomeComponent },
+  { path: '', component: LandingComponent },
+  { path: 'dashboard', component: DashboardComponent }
+];
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HeaderComponent,
     FooterComponent,
-    RegisterComponent
+    RegisterComponent,
+    LandingComponent,
+    DashboardComponent,
+    MenuComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
-    HttpModule,
+    HttpClientModule,
     FormsModule,
+    RouterModule.forRoot(routes, { useHash: true })
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
