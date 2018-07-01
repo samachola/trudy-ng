@@ -12,14 +12,16 @@ import { FooterComponent } from './components/widgets/footer/footer.component';
 import { RegisterComponent } from './components/register/register.component';
 
 import { AuthService } from './services/auth/auth.service';
+import { UsersService } from './services/users/users.service';
+
 import { LandingComponent } from './components/landing/landing.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { MenuComponent } from './components/admin/widgets/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 
 const routes: Routes = [
- // { path: '', component: HomeComponent },
   { path: '', component: LandingComponent },
+  { path: 'login', component: LandingComponent },
   { path: 'dashboard', component: DashboardComponent }
 ];
 @NgModule({
@@ -40,7 +42,10 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes, { useHash: true })
   ],
-  providers: [AuthService],
+  providers: [
+    AuthService,
+    UsersService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -144,82 +144,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
+                    <tr *ngFor="let user of users">
                         <td class=""><img src="assets/images/icon/freelancer-04.png" class="circle">
-                            <p><b>Jadeline Doe</b></p><span class="fas fa-map-marker-alt text-primary"></span><span class="pl-2">Syokimau</span></td>
-                        <td class="">jd@doe.com</td>
-                        <td class="">0722 000 999</td>
-                        <td class="">12T56HH96</td>
-                        <th>
-                            <span class="fa fa-eye text-primary"></span>
-                            <span class="far fa-trash-alt ml-5 text-danger"></span>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td class=""><img src="assets/images/icon/freelancer-04.png" class="circle">
-                            <p><b>Jadeline Doe</b></p><span class="fas fa-map-marker-alt text-primary"></span><span class="pl-2">Syokimau</span></td>
-                        <td class="">jd@doe.com</td>
-                        <td class="">0722 000 999</td>
-                        <td class="">12T56HH96</td>
-                        <th>
-                            <span class="fa fa-eye text-primary"></span>
-                            <span class="far fa-trash-alt ml-5 text-danger"></span>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td class=""><img src="assets/images/icon/freelancer-04.png" class="circle">
-                            <p><b>Jadeline Doe</b></p><span class="fas fa-map-marker-alt text-primary"></span><span class="pl-2">Syokimau</span></td>
-                        <td class="">jd@doe.com</td>
-                        <td class="">0722 000 999</td>
-                        <td class="">12T56HH96</td>
-                        <th>
-                            <span class="fa fa-eye text-primary"></span>
-                            <span class="far fa-trash-alt ml-5 text-danger"></span>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td class=""><img src="assets/images/icon/freelancer-04.png" class="circle">
-                            <p><b>Jadeline Doe</b></p><span class="fas fa-map-marker-alt text-primary"></span><span class="pl-2">Syokimau</span></td>
-                        <td class="">jd@doe.com</td>
-                        <td class="">0722 000 999</td>
-                        <td class="">12T56HH96</td>
-                        <th>
-                            <span class="fa fa-eye text-primary"></span>
-                            <span class="far fa-trash-alt ml-5 text-danger"></span>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td class=""><img src="assets/images/icon/freelancer-04.png" class="circle">
-                            <p><b>Jadeline Doe</b></p><span class="fas fa-map-marker-alt text-primary"></span><span class="pl-2">Syokimau</span></td>
-                        <td class="">jd@doe.com</td>
-                        <td class="">0722 000 999</td>
-                        <td class="">12T56HH96</td>
-                        <th>
-                            <span class="fa fa-eye text-primary"></span>
-                            <span class="far fa-trash-alt ml-5 text-danger"></span>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td class=""><img src="assets/images/icon/freelancer-04.png" class="circle">
-                            <p><b>Jadeline Doe</b></p><span class="fas fa-map-marker-alt text-primary"></span><span class="pl-2">Syokimau</span></td>
-                        <td class="">jd@doe.com</td>
-                        <td class="">0722 000 999</td>
-                        <td class="">12T56HH96</td>
-                        <th>
-                            <span class="fa fa-eye text-primary"></span>
-                            <span class="far fa-trash-alt ml-5 text-danger"></span>
-                        </th>
-                    </tr>
-                    <tr>
-                        <td class=""><img src="assets/images/icon/freelancer-04.png" class="circle">
-                            <p><b>Jadeline Doe</b></p><span class="fas fa-map-marker-alt text-primary"></span><span class="pl-2">Syokimau</span></td>
-                        <td class="">jd@doe.com</td>
-                        <td class="">0722 000 999</td>
-                        <td class="">12T56HH96</td>
-                        <th>
-                            <span class="fa fa-eye text-primary"></span>
-                            <span class="far fa-trash-alt ml-5 text-danger"></span>
-                        </th>
+                            <p><b>{{ user.name }}</b></p><span class="fas fa-map-marker-alt text-primary"></span><span class="pl-2">Syokimau</span></td>
+                        <td class="">{{ user.email }}/td>
+                            <td class="">{{ user.phone }}</td>
+                            <td class="">{{ user.idcard }}</td>
+                            <th>
+                                <span class="fa fa-eye text-primary"></span>
+                                <span class="far fa-trash-alt ml-5 text-danger"></span>
+                            </th>
                     </tr>
                 </tbody>
             </table>

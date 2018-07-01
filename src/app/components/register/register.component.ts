@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth/auth.service';
 
 
@@ -11,7 +12,10 @@ export class RegisterComponent implements OnInit {
   user = {};
   error: string;
 
-  constructor(private auth: AuthService) { }
+  constructor(
+    private auth: AuthService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
   }
@@ -19,8 +23,10 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     this.auth.register(this.user)
         .toPromise()
-        .then(res => console.log(res))
-        .catch(err => console.log(err));
+        .then(res => this.router.navigate(['login']))
+        .catch((err) => {
+          this.error = err.email || err.phone || err.name;
+        });
   }
 
 }
