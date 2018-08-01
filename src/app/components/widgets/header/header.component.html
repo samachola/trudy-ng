@@ -1,5 +1,5 @@
 <!-- HEADER DESKTOP-->
-<header class="header-desktop header-1 d-none d-lg-block">
+<header class="header-desktop header-1 d-none d-lg-block loginbg">
     <div class="container">
         <div class="section__content section__content--w1760">
             <div class="row header__content">
@@ -11,8 +11,8 @@
 
 
                             <li class="list-inline-item has-dropdown">
-                                <a href="about-me.html">Services</a>
-                                <ul class="dropdown-list list-unstyled is-right">
+                                <a href="#">Services</a>
+                                <ul class="dropdown-list list-unstyled is-left">
                                     <li>
                                         <a href="">Home Cleaning</a>
                                     </li>
@@ -35,7 +35,7 @@
                             </li>
 
                             <li class="list-inline-item has-mega">
-                                <a href="about-us2.html">About Us</a>
+                                <a href="#">About Us</a>
                             </li>
                             <li class="list-inline-item has-dropdown">
                                 <a href="#">How it works</a>
@@ -46,7 +46,7 @@
                 </div>
                 <div class="col-md-1 logo-wrap">
                     <a href="index.html" class="col-md-12">
-                        <img src="assets/images/icon/logo-black.png" alt="" />
+                        <img src="images/icon/logo-black.png" alt="" />
                     </a>
                 </div>
                 <div class="col-md-5 navheader-wrap ml-auto">
@@ -56,17 +56,20 @@
                                 <a href="contact.html">Contact</a>
                             </li>
                             <li class="list-inline-item has-dropdown">
-                                <a href="login.html">Register</a>
+																
+                                <a [routerLink]="['/requests']">Request Pro</a>
                             </li>
-                            <li class="list-inline-item proff">
-                                <a href="login.html">
-                                    <i class="icon-user-outline"></i>
-                                    <span class="smcaps">Jadeline Doe <i class="icon-cheveron-down"></i></span>
-                                </a>
+                            <li class="list-inline-item has-dropdown">
+                                <a [routerLink]="['/']">Login</a>
                             </li>
                         </ul>
                     </nav>
 
+                    <div class="search-btn-wrap">
+                        <button class="search-btn" data-toggle="modal" data-target="#searchModal">
+                          <i class="fa fa-search"></i>
+                      </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,16 +78,16 @@
 <!-- SEARCH MODAL-->
 <div class="modal fade" id="searchModal" role="dialog">
     <button class="close" type="button" data-dismiss="modal">
-    <i class="zmdi zmdi-close"></i>
-</button>
+      <i class="zmdi zmdi-close"></i>
+  </button>
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
                 <form id="searchModal__form" method="POST">
                     <input id="searchModal__input" type="text" name="search" placeholder="Search here..." />
                     <button id="searchModal__submit" type="submit">
-                    <i class="fa fa-search"></i>
-                </button>
+                      <i class="fa fa-search"></i>
+                  </button>
                 </form>
             </div>
         </div>
@@ -97,22 +100,22 @@
 <header class="header-mobile d-block d-lg-none">
     <div class="header-mobile__bar">
         <div class="container-fluid clearfix">
-            <a class="logo" href="#">
-                <img src="assets/images/icon/logo-black.png" alt="Umber" />
+            <a class="logo" href="index1.html">
+                <img src="images/icon/logo-black.png" alt="Umber" />
             </a>
             <button class="hamburger hamburger--slider float-right" type="button">
-            <span class="hamburger-box">
-                <span class="hamburger-inner"></span>
-            </span>
-        </button>
+              <span class="hamburger-box">
+                  <span class="hamburger-inner"></span>
+              </span>
+          </button>
         </div>
     </div>
     <nav class="navbar-mobile">
         <div class="container-fluid">
             <ul class="navbar-mobile__list list-unstyled">
-                <li class="list-inline-item has-dropdown">
+                <li class="has-dropdown">
                     <a href="#">Services</a>
-                    <ul class="dropdown-list list-unstyled is-right">
+                    <ul class="navbar-mobile__dropdown list-unstyled">
                         <li>
                             <a href="">Home Cleaning</a>
                         </li>
@@ -134,20 +137,20 @@
                     </ul>
                 </li>
 
-                <li class="list-inline-item has-mega">
+                <li class="">
                     <a href="#">About Us</a>
                 </li>
-                <li class="list-inline-item has-dropdown">
+                <li class="">
                     <a href="#">How it works</a>
                 </li>
-                <li class="list-inline-item has-dropdown">
-                    <a href="#">Contact</a>
+                <li class="">
+                    <a href="contact.html">Contact</a>
                 </li>
-                <li class="list-inline-item has-dropdown">
-                    <a href="#">Register</a>
+                <li class="">
+                    <a [routerLink]="['/requests']">Request Pro</a>
                 </li>
-                <li class="list-inline-item proff">
-                    <a href="#">
+                <li class="proff">
+                    <a href="login.html">
                         <i class="icon-user-outline"></i>
                         <span class="smcaps">Jadeline Doe <i class="icon-cheveron-down"></i></span>
                     </a>

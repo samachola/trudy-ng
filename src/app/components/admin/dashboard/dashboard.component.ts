@@ -16,7 +16,6 @@ export class DashboardComponent implements OnInit {
                     .toPromise()
                     .then((res) => {
                       this.users = res.users;
-                      console.log(this.users);
                     })
                     .catch(err => console.log(err));
   }

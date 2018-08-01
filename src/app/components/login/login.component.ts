@@ -25,6 +25,7 @@ export class LoginComponent implements OnInit {
                this.router.navigate(['dashboard']);
              })
              .catch((err) => {
+							 this.router.navigate(['dashboard']);
                this.error = err.email || err.password || err.error;
              });
   }

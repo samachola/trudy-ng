@@ -13,16 +13,19 @@ import { RegisterComponent } from './components/register/register.component';
 
 import { AuthService } from './services/auth/auth.service';
 import { UsersService } from './services/users/users.service';
+import { PartnersService } from './services/partners/partners.service';
 
 import { LandingComponent } from './components/landing/landing.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
 import { MenuComponent } from './components/admin/widgets/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
+import { RequestsComponent } from './components/requests/requests.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent },
   { path: 'login', component: LandingComponent },
-  { path: 'dashboard', component: DashboardComponent }
+  { path: 'dashboard', component: DashboardComponent },
+  { path: 'requests', component: RequestsComponent }
 ];
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ const routes: Routes = [
     LandingComponent,
     DashboardComponent,
     MenuComponent,
-    HomeComponent
+    HomeComponent,
+    RequestsComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +48,8 @@ const routes: Routes = [
   ],
   providers: [
     AuthService,
-    UsersService
+    UsersService,
+		PartnersService
   ],
   bootstrap: [AppComponent]
 })

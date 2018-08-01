@@ -1,0 +1,158 @@
+<div class="page-wrapper text-white ">
+    <!-- APPLICATION HEADER-->
+    <app-header></app-header>
+    <!-- END APPLICATION HEADER-->
+
+    <!-- CHECKOUT-->
+    <section class="checkout p-t-85">
+        <div class="container">
+
+            <div class="row request">
+
+                <div class="col-lg-12">
+                    <h3 class="title">Request Service</h3>
+                    <form method="POST">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="au-input-group">
+                                    <label>My Location
+                              <span>*</span>
+                          </label>
+
+                                    <div id="pac-container">
+                                        <input id="pac-input" class="au-input au-input--full" type="text" placeholder="Enter a location">
+                                        <!--
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-lg">show map</button> -->
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <div class="col-md-3">
+                                <div class="au-input-group">
+                                    <label for="example-datetime-local-input">Date and time
+                              <span>*</span>
+                          </label>
+                                    <div class="">
+                                        <input class="form-control" type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-3">
+                                <div class="au-input-group">
+                                    <label for="exampleSelect1">Select Service
+																				<span>*</span>
+																		</label>
+                                    <select class="form-control" id="exampleSelect1">
+																				<option>Plumbing</option>
+																				<option>Electrical</option>
+																				<option>Mechanical</option>
+																				<option>Housekeeping</option>
+																				<option>Errands</option>
+																		</select>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-3">
+                                <button type="button" class="mt-85 btn btn-primary">Find Pro</button>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- END CHECKOUT-->
+
+    <!-- SHOP-->
+
+    <section class="shop hytauto p-t-70 p-b-70 js-list-load">
+        <div class="container">
+            <div class="row">
+                <div *ngFor="let partner of partners" class="col-lg-6 js-load-item">
+                    <div class="shop__item">
+                        <div class="image">
+                            <div class="bg-overlay bg-overlay--opa30"></div>
+                            <div class="sale-tag"><span class="icon-badge"></span></div>
+                            <img src="./assets/images/shop-03.jpg" alt="young lucy" />
+                            <div class="tool-box">
+                                <a class="js-addcart" href="#">
+                          Request Service
+                      </a>
+                                <a href="pro.html">
+                          View Profile
+                      </a>
+                            </div>
+                        </div>
+                        <div class="content">
+                            <h3>
+                                <a class="js-name" href="product-detail.html">{{ partner.partner_details.name }}</a>
+                            </h3>
+                            <span class="price">{{ partner.partner_details.category }}</span>
+                            <div class="star-rating">
+                                <span class="fa fa-star" data-rating="1"></span>
+                                <span class="fa fa-star" data-rating="2"></span>
+                                <span class="fa fa-star" data-rating="3"></span>
+                                <span class="fa fa-star" data-rating="4"></span>
+                                <span class="fa fa-star" data-rating="5"></span>
+                                <input type="hidden" name="whatever1" class="rating-value" value="2.56">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+              
+            </div>
+
+            <div class="see-more">
+                <a class="au-btn au-btn--dark au-btn--p50 js-load-btn" href="#">see more</a>
+            </div>
+        </div>
+    </section>
+    <!-- END SHOP-->
+    <!-- FOOTER-->
+    <app-footer></app-footer>
+    <!-- END FOOTER-->
+</div>
+
+
+
+
+<!-- map mddal-->
+
+<div class="mappia">
+
+
+    <div class="about-us-2__intro">
+        <div class="about-us-2__intro-inner">
+            <h2 class="wow fadeInLeft" data-wow-delay=".5s">Your</h2>
+            <h1 class="wow fadeInLeft" data-wow-delay=".2s">Location</h1>
+
+            <div class="pac-card" id="pac-card">
+
+
+                <!--   <div id="pac-container">
+            <input id="pac-input" type="text"
+                placeholder="Enter a location">
+          </div> -->
+
+                <div id="map"></div>
+                <div id="infowindow-content">
+                    <img src="" width="16" height="16" id="place-icon">
+                    <span id="place-name" class="title"></span><br>
+                    <span id="place-address"></span>
+                </div>
+            </div>
+            <a class="closey" href="" data-wow-delay=".6s"><span class="icon-close"></span></a>
+            <a class="btn btn-primary" href="" data-wow-delay=".6s">Yes thats my location</a>
+        </div>
+    </div>
+</div>
+
+<!-- map mddal-->
