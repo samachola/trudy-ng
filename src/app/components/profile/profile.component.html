@@ -1,0 +1,373 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div id="main-wrapper" class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <!-- HEADER DESKTOP-->
+    <app-header></app-header>
+
+    <!-- END HEADER MOBILE-->
+    <div class="container p-b-70">
+        <!-- ============================================================== -->
+        <!-- Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <div class="page-breadcrumb">
+            <div class="row">
+                <div class="col-5 align-self-center">
+                    <h4 class="page-title">My Profile</h4>
+                    <div class="d-flex align-items-center">
+
+                    </div>
+                </div>
+                <div class="col-7 align-self-center">
+                    <div class="d-flex no-block justify-content-end align-items-center">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item">
+                                    <a href="#">partners</a>
+                                </li>
+                                <li class="breadcrumb-item active" aria-current="page">profile</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Bread crumb and right sidebar toggle -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Container fluid  -->
+        <!-- ============================================================== -->
+        <div class="container-fluid">
+            <!-- ============================================================== -->
+            <!-- Start Page Content -->
+            <!-- ============================================================== -->
+            <!-- Row -->
+            <div class="row">
+                <!-- Column -->
+                <div class="col-lg-4 col-xlg-3 col-md-5">
+                    <div class="card">
+                        <div class="card-body">
+                            <a *ngIf="currentUser" href="" rel="tooltip" class="tooly" data-toggle="tooltip" data-placement="bottom" title="Edit details">
+                                <span class="icon-pencil"></span>
+                            </a>
+                            <div class="m-t-30">
+                                <img src="assets/images/pro.jpg" class="rounded-circle" width="100" />
+                                <h4 class="card-title m-t-10">{{user.name}}</h4>
+                                <p class="card-subtitle">Errands Pro</p>
+                                <div class="row text-center justify-content-md-center ratestar">
+                                    <a href="#">
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="fa fa-star"></span>
+                                    </a>
+                                    <a href="#">
+                                        <span class="fa fa-star-o"></span>
+                                    </a>
+                                </div>
+																<input type="text" class="form-control form-control-line" name="location" id="autocomplete" autocorrect="off" autocapitalize="off" spellcheck="off" #search>
+                                <button *ngIf="!currentUser" class="btn au-btn m-t-20" type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Request Service</button>
+                            </div>
+                        </div>
+                        <div>
+                            <hr> </div>
+
+                        <div class="card-body">
+                            <a *ngIf="currentUser" href="" rel="tooltip" class="tooly" data-toggle="tooltip" data-placement="bottom" title="Edit details">
+                                <span class="icon-pencil"></span>
+                            </a>
+                            <h6>Email address </h6>
+                            <p class="text-muted">{{user.email}}</p>
+                            <h6 class="p-t-30 db">Phone</h6>
+                            <p class="text-muted">{{user.phone}}</p>
+
+                        </div>
+                        <hr>
+                        <div class="card-body">
+                            <h6 class="font-medium m-t-30">My Skills</h6>
+                            <a *ngIf="currentUser" href="" rel="tooltip" class="tooly" data-toggle="tooltip" data-placement="bottom" title="Edit details">
+                                <span class="icon-pencil"></span>
+                            </a>
+                            <div class="col-12 m-t-30 skkll">
+                                <span class="pull-left skillcol lau"></span>
+                                <h5 class="pull-left">Laundry </h5>
+                            </div>
+
+                            <div class="col-12 m-t-30 skkll">
+                                <span class="pull-left skillcol errands"></span>
+                                <h5 class="pull-left">Errands </h5>
+                            </div>
+                            <div class="col-12 m-t-30 skkll">
+                                <span class="pull-left skillcol elect"></span>
+                                <h5 class="pull-left">Electrician </h5>
+                            </div>
+
+                            <div class="col-12 m-t-30 skkll">
+                                <span class="pull-left skillcol cleaning"></span>
+                                <h5 class="pull-left">Errands </h5>
+                            </div>
+
+                            <div class="col-12 m-t-30 skkll">
+                                <span class="pull-left skillcol plumbing"></span>
+                                <h5 class="pull-left">Laundry </h5>
+                            </div>
+
+                            <div class="col-12 m-t-30 skkll">
+                                <span class="pull-left skillcol nanny"></span>
+                                <h5 class="pull-left">Errands </h5>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+                <!-- Column -->
+                <div class="col-lg-8 col-xlg-9 col-md-7">
+                    <div class="card">
+                        <!-- Tabs -->
+                        <ul class="nav nav-pills custom-pills" id="pills-tab" role="tablist">
+                            <li class="nav-item" (click)="tab('profile')">
+                                <a class="nav-link active" id="pills-profile-tab" data-toggle="pill" href="#" aria-controls="pills-profile" aria-selected="false">Profile</a>
+                            </li>
+                            <li class="nav-item" (click)="tab('timeline')">
+                                <a class="nav-link " id="pills-timeline-tab" data-toggle="pill" href="#" aria-controls="pills-timeline" aria-selected="true">Activities</a>
+                            </li>
+                            <li *ngIf="currentUser" class="nav-item" (click)="tab('settings')">
+                                <a class="nav-link" id="pills-setting-tab" data-toggle="pill" href="#" aria-controls="pills-setting" aria-selected="false">Setting</a>
+                            </li>
+                        </ul>
+                        <!-- Tabs -->
+                        <div class="tab-content" id="pills-tabContent">
+                            <div *ngIf="profile" class="tab-pane fade show active" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                <div class="card-body">
+                                    <a *ngIf="currentUser" href="" rel="tooltip" class="tooly" data-toggle="tooltip" data-placement="bottom" title="Edit details">
+                                        <span class="icon-pencil"></span>
+                                    </a>
+                                    <div class="row">
+                                        <div class="col-md-3 col-xs-6 b-r"> <strong>Full Name</strong>
+                                            <br>
+                                            <p class="text-muted">{{ user.name }}</p>
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 b-r"> <strong>Mobile</strong>
+                                            <br>
+                                            <p class="text-muted">{{ user.phone }}</p>
+                                        </div>
+                                        <div class="col-md-3 col-xs-6 b-r"> <strong>Email</strong>
+                                            <br>
+                                            <p class="text-muted">{{ user.email }}</p>
+                                        </div>
+                                        <div class="col-md-3 col-xs-6"> <strong>Location</strong>
+                                            <br>
+                                            <p class="text-muted">Naivasha</p>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <h6 class="font-medium m-t-30">About Me</h6>
+                                    <p class="m-t-30">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus
+                                        elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
+                                        to make a type specimen book. It has survived not only five centuries </p>
+                                    <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                                    <div class="sociale col-12 p-0">
+                                        <button class="btn btn-circle"><i class="fab fa-facebook-f"></i></button>
+                                        <button class="btn btn-circle"><i class="fab fa-twitter"></i></button>
+                                        <button class="btn btn-circle"><i class="fab fa-youtube"></i></button>
+                                    </div>
+                                    <div class="map-box">
+                                        <hr>
+                                        <h6 class="p-t-30 db">Location</h6>
+                                        <br/>
+                                        <!--The div element for the map -->
+                                        <agm-map [latitude]="lat" [longitude]="lng">
+																					<agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+																				</agm-map>
+                                    </div>
+                                </div>
+                            </div>
+                            <div *ngIf="timeline" class="tab-pane show active" role="tabpanel" aria-labelledby="pills-timeline-tab">
+                                <div class="card-body">
+                                    <div class="profiletimeline m-t-0">
+                                        <div class="sl-item">
+                                            <div class="sl-left"> <img src="assets/images/pro.jpg" alt="user" class="rounded-circle" /> </div>
+                                            <div class="sl-right">
+                                                <div><a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
+                                                    <p>Took a new task <a href="javascript:void(0)"> Running Errands </a></p>
+                                                    <div class="row">
+                                                        <div class="col-lg-3 col-md-6 m-b-20"><img src="assets/images/pro.jpg" class="img-fluid rounded" /></div>
+                                                        <div class="col-lg-3 col-md-6 m-b-20"><img src="assets/images/pro.jpg" class="img-fluid rounded" /></div>
+                                                        <div class="col-lg-3 col-md-6 m-b-20"><img src="assets/images/pro.jpg" class="img-fluid rounded" /></div>
+                                                        <div class="col-lg-3 col-md-6 m-b-20"><img src="assets/images/pro.jpg" class="img-fluid rounded" /></div>
+                                                    </div>
+                                                    <div class="like-comm"> <a href="javascript:void(0)" class="link m-r-10">2 comment</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="sl-item">
+                                            <div class="sl-left"> <img src="assets/images/pro.jpg" alt="user" class="rounded-circle" /> </div>
+                                            <div class="sl-right">
+                                                <div> <a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
+                                                    <div class="m-t-20 row">
+                                                        <div class="col-md-3 col-xs-12"><img src="assets/images/pro.jpg" alt="user" class="img-fluid rounded" /></div>
+                                                        <div class="col-md-9 col-xs-12">
+                                                            <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. </p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="like-comm m-t-20"> <a href="javascript:void(0)" class="link m-r-10">2 comment</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="sl-item">
+                                            <div class="sl-left"> <img src="assets/images/pro.jpg" alt="user" class="rounded-circle" /> </div>
+                                            <div class="sl-right">
+                                                <div><a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
+                                                    <p class="m-t-10"> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent
+                                                        mauris. Fusce nec tellus sed augue semper </p>
+                                                </div>
+                                                <div class="like-comm m-t-20"> <a href="javascript:void(0)" class="link m-r-10">2 comment</a> <a href="javascript:void(0)" class="link m-r-10"><i class="fa fa-heart text-danger"></i> 5 Love</a> </div>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="sl-item">
+                                            <div class="sl-left"> <img src="assets/images/pro.jpg" alt="user" class="rounded-circle" /> </div>
+                                            <div class="sl-right">
+                                                <div><a href="javascript:void(0)" class="link">John Doe</a> <span class="sl-date">5 minutes ago</span>
+                                                    <blockquote class="m-t-10">
+                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
+                                                    </blockquote>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div *ngIf="settings" class="tab-pane show active" role="tabpanel" aria-labelledby="pills-setting-tab">
+                                <div class="card-body">
+                                    <form #settingsForm="ngForm" class="form-horizontal form-material">
+                                        <div class="form-group">
+                                            <label class="col-md-12">Full Name</label>
+                                            <div class="col-md-12">
+                                                <input type="text" placeholder="{{user.name}}" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="example-email" class="col-md-12">Email</label>
+                                            <div class="col-md-12">
+                                                <input type="email" value="{{user.email}}" class="form-control form-control-line" name="example-email" id="example-email">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">Password</label>
+                                            <div class="col-md-12">
+                                                <input type="password" placeholder="**********" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+
+																				<div class="form-group">
+                                            <label for="example-email" class="col-md-12">Location</label>
+                                            <div class="col-md-12">
+                                              <input type="text" class="form-control form-control-line" name="location" id="autocomplete" autocorrect="off" autocapitalize="off" spellcheck="off" #search>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <label class="col-md-12">Phone No</label>
+                                            <div class="col-md-12">
+                                                <input type="text" value="{{user.phone}}" class="form-control form-control-line">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-12">About</label>
+                                            <div class="col-md-12">
+                                                <textarea rows="5" class="form-control form-control-line"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-sm-12">Select County</label>
+                                            <div class="col-sm-12">
+                                                <select class="form-control form-control-line">
+                                                        <option>Mombasa</option>
+                                                        <option>Nairobi</option>
+                                                        <option>Kiambu</option>
+                                                        <option>Nakuru</option>
+                                                        <option>Kisumu</option>
+                                                    </select>
+                                            </div>
+                                        </div>
+                                        <div class="payment">
+                                            <div class="payment-form">
+                                                <div class="au-input-group au-input-checkbox">
+                                                    <input type="checkbox" checked="">
+                                                    <span>check payment</span>
+                                                    <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                                                </div>
+                                                <div class="au-input-group au-input-checkbox">
+                                                    <input type="checkbox">
+                                                    <span>paypal</span>
+                                                    <div class="paypal-intro">
+                                                        <a href="#">
+                                                            <img src="assets/images/icon/paypal.jpg" alt="PayPal">
+                                                        </a>
+                                                        <span>
+                                                                <a href="#">What is Paypal?</a>
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <button class="au-btn au-btn--dark au-btn--p40 m-t-50" type="submit">Update Profile</button>
+                                        </div>
+                                        <!--  <div class="form-group">
+                                                <div class="col-sm-12">
+                                                    <button class="btn au-btn">Update Profile</button>
+                                                </div>
+                                            </div> -->
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Column -->
+            </div>
+            <!-- Row -->
+            <!-- ============================================================== -->
+            <!-- End PAge Content -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- Right sidebar -->
+            <!-- ============================================================== -->
+            <!-- .right-sidebar -->
+            <!-- ============================================================== -->
+            <!-- End Right sidebar -->
+            <!-- ============================================================== -->
+        </div>
+        <!-- ============================================================== -->
+        <!-- End Container fluid  -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- footer -->
+        <!-- ============================================================== -->
+        <!--             <footer class="footer text-center">
+                All Rights Reserved by AdminBite admin. Designed and Developed by
+                <a href="https://wrappixel.com">WrapPixel</a>.
+            </footer> -->
+        <!-- ============================================================== -->
+        <!-- End footer -->
+        <!-- ============================================================== -->
+    </div>
+    <!-- ============================================================== -->
+    <!-- End Page wrapper  -->
+    <!-- ============================================================== -->
+</div>

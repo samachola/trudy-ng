@@ -23,7 +23,7 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
     this.auth.register(this.user)
         .toPromise()
-        .then(res => this.router.navigate(['login']))
+        .then(res => window.location.reload())
         .catch((err) => {
           this.error = err.email || err.phone || err.name;
         });

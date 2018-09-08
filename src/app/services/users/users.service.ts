@@ -27,7 +27,21 @@ export class UsersService {
                     .map(this.handleResponse)
                     .catch(this.handleError);
 
-  }
+	}
+	
+	/**
+	 * Get user details.
+	 * 
+	 * @param id
+	 * 
+	 * @return { Observable } - user details.
+	 */
+	getUserDetails(id) {
+		return this.http.get(`${this.apiBaseUrl}/users/${id}`)
+										.map(this.handleResponse)
+										.catch(this.handleError);
+	}
+
   /**
    * Handle response from server.
    *

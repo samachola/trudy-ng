@@ -1,93 +1,288 @@
+<!-- ============================================================== -->
+<!-- Topbar header - style you can find in pages.scss -->
+<!-- ============================================================== -->
 <!-- HEADER DESKTOP-->
-<header class="header-desktop header-1 d-none d-lg-block loginbg">
+<header class="header-desktop header-1 d-none d-lg-block">
     <div class="container">
         <div class="section__content section__content--w1760">
             <div class="row header__content">
-                <div class="col-md-5">
 
+                <div class="col-md-1 logo-wrap">
+                    <a routerLink="/" class="col-md-12">
+                        <img src="assets/images/icon/logo-black.png" alt="" />
+                    </a>
+                </div>
+                <div class="col-md-10 ml-auto">
                     <nav class="nav-header">
                         <ul class="list-unstyled list-inline">
-
-
-
                             <li class="list-inline-item has-dropdown">
                                 <a href="#">Services</a>
                                 <ul class="dropdown-list list-unstyled is-left">
                                     <li>
-                                        <a href="">Home Cleaning</a>
+                                        <a routerLink="/requests">
+                                            <span class="col-2 float-left">
+                                                        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                             viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+                                                        <g>
+                                                            <path style="fill:#78B9EB;" d="M216.348,376h-176h-8l-8,96h32v-64v64h24v-64v64h24v-64v64h24v-64v64h24v-64v64h24v-64v64h24v-64v64
+                                                                h32l-8-96H216.348z"/>
+                                                            <path style="fill:#78B9EB;" d="M280.348,280l8,192h144l8-192H280.348z"/>
+                                                        </g>
+                                                        <g>
+                                                            <path style="fill:#1E81CE;" d="M224.348,368v-11.08L184.756,312h-32.408V0h-48v312H72.052l-39.704,45.048V368h-7.36l-9.336,112
+                                                                h225.392l-9.336-112H224.348z M136.348,16v8h-16v-8H136.348z M120.348,40h16v272h-16V40z M48.348,363.096L79.268,328h98.264
+                                                                l30.816,34.968V368h-160L48.348,363.096z M208.348,464v-56h-16v56h-8v-56h-16v56h-8v-56h-16v56h-8v-56h-16v56h-8v-56h-16v56h-8v-56
+                                                                h-16v56h-8v-56h-16v56H33.044l6.664-80h177.28l6.664,80H208.348z"/>
+                                                            <path style="fill:#1E81CE;" d="M456.348,272v-56c-0.057-48.577-39.423-87.943-88-88h-16c-48.577,0.057-87.943,39.423-88,88v56h-8
+                                                                v16h16.32l8,192H440.02l8-192h16.328v-16H456.348z M280.348,216c0.044-39.746,32.254-71.956,72-72h16
+                                                                c39.746,0.044,71.956,32.254,72,72v56h-160V216z M424.676,464H296.02l-7.328-176h143.312L424.676,464z"/>
+                                                            <path style="fill:#1E81CE;" d="M400.348,304h16v16h-16V304z"/>
+                                                            <path style="fill:#1E81CE;" d="M400.348,328h16v16h-16V328z"/>
+                                                            <path style="fill:#1E81CE;" d="M376.348,304h16v16h-16V304z"/>
+                                                        </g>
+
+                                                        </svg>
+
+                                                    </span>
+                                            <span class="col-10 float-left">
+                                                        <b href="">Home Cleaning</b>
+                                                        <p>Sed ut perspiciatis unde </p>
+                                                    </span>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="">Handyman </a>
+                                        <a routerLink="/requests">
+                                            <span class="col-2 float-left">
+                                                        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                             viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+                                                        <g>
+                                                            <path style="fill:#78B9EB;" d="M148,8H52v80h96V8z"/>
+                                                            <path style="fill:#78B9EB;" d="M428,88V8H148v80H428z M188,32c8.837,0,16,7.163,16,16s-7.163,16-16,16s-16-7.163-16-16
+                                                                S179.163,32,188,32z"/>
+                                                            <circle style="fill:#78B9EB;" cx="244" cy="256" r="104"/>
+                                                        </g>
+                                                        <g>
+                                                            <path style="fill:#1E81CE;" d="M44,0v480h392V0H44z M420,80H156V16h264V80z M420,96v320H60V96H420z M140,16v64H60V16H140z M60,464
+                                                                v-32h360v32H60z"/>
+                                                            <path style="fill:#1E81CE;" d="M76,40h16v16H76V40z"/>
+                                                            <path style="fill:#1E81CE;" d="M108,40h16v16h-16V40z"/>
+                                                            <path style="fill:#1E81CE;" d="M188,72c13.255,0,24-10.745,24-24s-10.745-24-24-24s-24,10.745-24,24S174.745,72,188,72z M188,40
+                                                                c4.418,0,8,3.582,8,8s-3.582,8-8,8s-8-3.582-8-8S183.582,40,188,40z"/>
+                                                            <path style="fill:#1E81CE;" d="M228,40h144v16H228V40z"/>
+                                                            <path style="fill:#1E81CE;" d="M388,40h16v16h-16V40z"/>
+                                                            <path style="fill:#1E81CE;" d="M244,400c79.529,0,144-64.471,144-144s-64.471-144-144-144s-144,64.471-144,144
+                                                                C100.093,335.491,164.509,399.907,244,400z M244,128c70.692,0,128,57.308,128,128s-57.308,128-128,128s-128-57.308-128-128
+                                                                C116.084,185.342,173.342,128.084,244,128z"/>
+                                                            <path style="fill:#1E81CE;" d="M244,368c61.856,0,112-50.144,112-112s-50.144-112-112-112s-112,50.144-112,112
+                                                                C132.066,317.828,182.172,367.934,244,368z M244,160c53.019,0,96,42.981,96,96s-42.981,96-96,96s-96-42.981-96-96
+                                                                C148.057,203.004,191.004,160.057,244,160z"/>
+                                                            <path style="fill:#1E81CE;" d="M388,440h16v16h-16V440z"/>
+                                                            <path style="fill:#1E81CE;" d="M356,440h16v16h-16V440z"/>
+                                                            <path style="fill:#1E81CE;" d="M76,440h16v16H76V440z"/>
+                                                            <path style="fill:#1E81CE;" d="M76,136h16v16H76V136z"/>
+                                                            <path style="fill:#1E81CE;" d="M76,112h16v16H76V112z"/>
+                                                            <path style="fill:#1E81CE;" d="M100,112h16v16h-16V112z"/>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        </svg>
+                                                    </span>
+                                            <span class="col-10 float-left">
+                                                        <b href="">Laundry</b>
+                                                        <p>Sed ut perspiciatis unde </p>
+                                                    </span>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="">Interior Painting</a>
+                                        <a routerLink="/requests">
+                                            <span class="col-2 float-left">
+                                                        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                             viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+                                                        <g>
+                                                            <path style="fill:#78B9EB;" d="M376,199.872h-32h-32h-32h-32h-32h-32h-32v48h256v-48H376z"/>
+                                                            <path style="fill:#78B9EB;" d="M72,279.872h336v144H72V279.872z"/>
+                                                        </g>
+                                                        <g>
+                                                            <path style="fill:#1E81CE;" d="M480,199.872h-8v-128H255.696L42.016,16.128l-4,15.488l154.288,40.256H8v128H0v64h32v200h416v-200
+                                                                h32V199.872z M456,87.872v112h-8v-40h-16v-32h-16v-14.176l-98.976-25.824L456,87.872z M416,143.872v16h-16v-16H416z M24,87.872
+                                                                h229.64L400,126.048v1.824h-16v32H32v40h-8V87.872z M16,247.872v-32h16v32H16z M432,447.872H48v-272h384V447.872z M464,247.872h-16
+                                                                v-32h16V247.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M96,255.872c17.673,0,32-14.327,32-32s-14.327-32-32-32s-32,14.327-32,32S78.327,255.872,96,255.872
+                                                                z M96,207.872c8.837,0,16,7.163,16,16s-7.163,16-16,16s-16-7.163-16-16S87.163,207.872,96,207.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M144,255.872h272v-64H144V255.872z M160,207.872h16v8h16v-8h16v8h16v-8h16v8h16v-8h16v8h16v-8h16v8
+                                                                h16v-8h16v8h16v-8h16v8h16v-8h16v32H160V207.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M64,431.872h352v-160H64V431.872z M80,287.872h320v128H80V287.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M104,311.872h16v16h-16V311.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M136,311.872h16v16h-16V311.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M168,311.872h16v16h-16V311.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M200,311.872h16v16h-16V311.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M232,311.872h16v16h-16V311.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M264,311.872h16v16h-16V311.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M296,311.872h16v16h-16V311.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M328,311.872h16v16h-16V311.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M360,311.872h16v16h-16V311.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M104,343.872h16v16h-16V343.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M136,343.872h16v16h-16V343.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M168,343.872h16v16h-16V343.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M200,343.872h16v16h-16V343.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M232,343.872h16v16h-16V343.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M264,343.872h16v16h-16V343.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M296,343.872h16v16h-16V343.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M328,343.872h16v16h-16V343.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M360,343.872h16v16h-16V343.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M104,375.872h16v16h-16V375.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M136,375.872h16v16h-16V375.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M168,375.872h16v16h-16V375.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M200,375.872h16v16h-16V375.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M232,375.872h16v16h-16V375.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M264,375.872h16v16h-16V375.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M296,375.872h16v16h-16V375.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M328,375.872h16v16h-16V375.872z"/>
+                                                            <path style="fill:#1E81CE;" d="M360,375.872h16v16h-16V375.872z"/>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        </svg>
+                                                    </span>
+                                            <span class="col-10 float-left">
+                                                        <b href="">Electricals</b>
+                                                        <p>Sed ut perspiciatis unde </p>
+                                                    </span>
+                                        </a>
                                     </li>
                                     <li>
-                                        <a href="">Errands</a>
+                                        <a routerLink="/requests">
+                                            <span class="col-2 float-left">
+                                                        <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                             viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+                                                        <g>
+                                                            <path style="fill:#78B9EB;" d="M176,404c0,35.346,28.654,64,64,64s64-28.654,64-64V284H176V404z"/>
+                                                            <path style="fill:#78B9EB;" d="M352,92v16h32V76c0-8.837-7.163-16-16-16h-96v32H352z"/>
+                                                            <path style="fill:#78B9EB;" d="M128,60h-16c-8.837,0-16,7.163-16,16v32h32V92h80V60H128z"/>
+                                                            <path style="fill:#78B9EB;" d="M256,28c0-8.837-7.163-16-16-16c-8.837,0-16,7.163-16,16v32h32V28z"/>
+                                                        </g>
+                                                        <g>
+                                                            <path style="fill:#1E81CE;" d="M280,164v-64h64v16h48V76c0-13.255-10.745-24-24-24H264V28c0-13.255-10.745-24-24-24
+                                                                c-13.255,0-24,10.745-24,24v24H112c-13.255,0-24,10.745-24,24v40h48v-16h64v64H0v56c0.044,39.746,32.254,71.956,72,72h96v112
+                                                                c0,39.764,32.236,72,72,72s72-32.236,72-72V292h96c39.746-0.044,71.956-32.254,72-72v-56H280z M280,68h88c4.418,0,8,3.582,8,8v24
+                                                                h-16V84h-80V68z M232,28c0-4.418,3.582-8,8-8s8,3.582,8,8v24h-16V28z M120,84v16h-16V76c0-4.418,3.582-8,8-8h88v16H120z M216,100
+                                                                V68h48v96h-48V100z M296,404c0,30.928-25.072,56-56,56s-56-25.072-56-56V292h112V404z M464,220c-0.04,30.911-25.089,55.96-56,56H72
+                                                                c-30.911-0.04-55.96-25.089-56-56v-40h448V220z"/>
+                                                            <path style="fill:#1E81CE;" d="M360,132h16v16h-16V132z"/>
+                                                            <path style="fill:#1E81CE;" d="M322.749,125.91l11.319-11.319l11.314,11.314l-11.319,11.319L322.749,125.91z"/>
+                                                            <path style="fill:#1E81CE;" d="M390.627,125.9l11.314-11.314l11.319,11.319l-11.314,11.314L390.627,125.9z"/>
+                                                            <path style="fill:#1E81CE;" d="M104,132h16v16h-16V132z"/>
+                                                            <path style="fill:#1E81CE;" d="M134.623,125.937l11.314-11.314l11.319,11.319l-11.314,11.314L134.623,125.937z"/>
+                                                            <path style="fill:#1E81CE;" d="M66.745,125.947l11.319-11.319l11.314,11.314L78.058,137.26L66.745,125.947z"/>
+                                                            <path style="fill:#1E81CE;" d="M432,196h16v16h-16V196z"/>
+                                                            <path style="fill:#1E81CE;" d="M432,220h16v16h-16V220z"/>
+                                                            <path style="fill:#1E81CE;" d="M408,196h16v16h-16V196z"/>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        <g>
+                                                        </g>
+                                                        </svg>
+                                                    </span>
+                                            <span class="col-10 float-left">
+                                                        <b href="">Plumbing</b>
+                                                        <p>Sed ut perspiciatis unde </p>
+                                                    </span>
+                                        </a>
                                     </li>
-                                    <li>
-                                        <a href="">Maid Service</a>
-                                    </li>
-                                    <li class="alle text-center">
-                                        <a href="cats.html">See All</a>
+                                    <li class="alle">
+                                        <a routerLink="/login">
+
+                                            <span class="col-2 float-left">
+                                                            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+                                                            <g>
+                                                                <g>
+                                                                    <g>
+                                                                        <path d="M472,128.4h-56c-4.418,0-8,3.582-8,8v16h-40c-4.418,0-8,3.582-8,8H120c0-4.418-3.582-8-8-8H72v-16c0-4.418-3.582-8-8-8H8     c-4.418,0-8,3.582-8,8v160c0,4.418,3.582,8,8,8h56c4.418,0,8-3.582,8-8v-16h40c4.418,0,8-3.582,8-8h39.648l58.136,58.136     c9.335,9.353,24.486,9.368,33.839,0.033c0.011-0.011,0.022-0.022,0.033-0.033l5.72-5.68c3.003,3.016,7.088,4.704,11.344,4.688     c4.258,0.01,8.343-1.683,11.344-4.704l11.272-11.2l5.6,5.544c2.999,3.018,7.081,4.709,11.336,4.696     c4.261,0.016,8.351-1.678,11.352-4.704l11.272-11.2l5.6,5.544c3,3.016,7.082,4.707,11.336,4.696     c4.254,0.018,8.337-1.671,11.336-4.688l11.28-11.28l0.064-0.072c5.853-5.977,6.152-15.442,0.688-21.776H408v16     c0,4.418,3.582,8,8,8h56c4.418,0,8-3.582,8-8v-160C480,131.982,476.418,128.4,472,128.4z M56,288.4H16v-144h40V288.4z M104,256.4     H72v-80h32V256.4z M347.856,302.136l-5.6-5.544c-3.001-3.014-7.083-4.702-11.336-4.688c-4.261-0.01-8.35,1.681-11.36,4.696     l-11.264,11.2l-5.6-5.552c-3.003-3.016-7.088-4.704-11.344-4.688c-4.258-0.01-8.343,1.683-11.344,4.704l-11.384,11.112     c-6.356-5.938-16.245-5.871-22.52,0.152l-5.68,5.68c-3.144,3.013-8.104,3.013-11.248,0l-60.48-60.48     c-1.522-1.514-3.589-2.353-5.736-2.328H120v-80h100.688l-18.896,18.896c-4.526,4.477-7.072,10.578-7.072,16.944     c-0.018,0.947,0.063,1.893,0.24,2.824c0.576,5.374,2.986,10.386,6.824,14.192c3.751,3.771,8.681,6.143,13.968,6.72     c0.959,0.238,1.953,0.306,2.936,0.2c6.372,0.151,12.519-2.356,16.968-6.92l20.936-20.856h20.088l82.456,82.584L347.856,302.136z      M360,256.4h-12.688l-61.656-61.656c-1.5-1.5-3.534-2.344-5.656-2.344h-26.72c-2.122,0-4.156,0.844-5.656,2.344l-23.28,23.2     c-1.455,1.521-3.497,2.338-5.6,2.24c-0.152,0-0.464-0.056-0.456,0l-0.584-0.064c-1.755-0.127-3.403-0.893-4.632-2.152     c-1.292-1.252-2.09-2.928-2.248-4.72c-0.022-0.355-0.067-0.707-0.136-1.056c0.037-2.095,0.899-4.09,2.4-5.552l30.224-30.24H360     V256.4z M408,256.4h-32v-80h32V256.4z M464,288.4h-40v-144h40V288.4z" fill="#FFFFFF"/>
+                                                                        <rect x="384" y="184.4" width="16" height="16" fill="#FFFFFF"/>
+                                                                        <rect x="80" y="184.4" width="16" height="16" fill="#FFFFFF"/>
+                                                                        <rect x="134.624" y="319.029" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 53.1878 676.0904)" width="64" height="16" fill="#FFFFFF"/>
+                                                                        <rect x="115.31" y="341.658" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 17.872 706.7186)" width="80" height="16" fill="#FFFFFF"/>
+                                                                        <rect x="256" y="120.4" width="64" height="16" fill="#FFFFFF"/>
+                                                                        <rect x="256" y="96.4" width="80" height="16" fill="#FFFFFF"/>
+                                                                    </g>
+                                                                </g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            <g>
+                                                            </g>
+                                                            </svg>
+
+                                                    </span>
+                                            <span class="col-10 float-left">
+                                                        <b>Join Trudy</b>
+                                                        <p class="text-white">Sed ut perspiciatis unde omnis</p>
+                                                    </span>
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
 
                             <li class="list-inline-item has-mega">
-                                <a href="#">About Us</a>
+                                <a href="about.html">About Us</a>
+                            </li>
+                            <li *ngIf="!authenticated" class="list-inline-item has-dropdown">
+                                <a href="contact.html">How it works</a>
                             </li>
                             <li class="list-inline-item has-dropdown">
-                                <a href="#">How it works</a>
+                                <a href="contact.html">Contact us</a>
+                            </li>
+                            <li *ngIf="!authenticated" class="list-inline-item has-dropdown">
+                                <a routerLink="/login">Login</a>
+                            </li>
+                            <li *ngIf="authenticated" class="list-inline-item has-dropdown">
+                                <a routerLink="/profile/{{currentUser.id}}">My Profile</a>
+                            </li>
+                            <li *ngIf="authenticated" class="list-inline-item has-dropdown">
+                                <a routerLink="/login">Settings</a>
+                            </li>
+                            <li class="list-inline-item has-dropdown">
+                                <a class="reqform" routerLink="/requests">Request Pro</a>
+                            </li>
+                            <li *ngIf="authenticated" class="list-inline-item has-dropdown">
+                                <a (click)="logout()">Logout</a>
                             </li>
                         </ul>
                     </nav>
 
+                    <!--div class="search-btn-wrap">
+                        <a class="search-btn" data-toggle="modal" data-target="#searchModal">
+                            <i class="fa fa-search"></i> Lookup Something
+                        </a>
+                    </div-->
                 </div>
-                <div class="col-md-1 logo-wrap">
-                    <a href="index.html" class="col-md-12">
-                        <img src="images/icon/logo-black.png" alt="" />
-                    </a>
-                </div>
-                <div class="col-md-5 navheader-wrap ml-auto">
-                    <nav class="nav-header">
-                        <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item has-dropdown">
-                                <a href="contact.html">Contact</a>
-                            </li>
-                            <li class="list-inline-item has-dropdown">
-																
-                                <a [routerLink]="['/requests']">Request Pro</a>
-                            </li>
-                            <li class="list-inline-item has-dropdown">
-                                <a [routerLink]="['/']">Login</a>
-                            </li>
-                        </ul>
-                    </nav>
 
-                    <div class="search-btn-wrap">
-                        <button class="search-btn" data-toggle="modal" data-target="#searchModal">
-                          <i class="fa fa-search"></i>
-                      </button>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+
 </header>
 <!-- SEARCH MODAL-->
 <div class="modal fade" id="searchModal" role="dialog">
     <button class="close" type="button" data-dismiss="modal">
-      <i class="zmdi zmdi-close"></i>
-  </button>
+                <i class="zmdi zmdi-close"></i>
+            </button>
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <form id="searchModal__form" method="POST">
+                <form id="searchModal__form" onkeyup="searchtafuta()" method="POST">
                     <input id="searchModal__input" type="text" name="search" placeholder="Search here..." />
                     <button id="searchModal__submit" type="submit">
-                      <i class="fa fa-search"></i>
-                  </button>
+                                <i class="fa fa-search"></i>
+                            </button>
                 </form>
             </div>
         </div>
@@ -101,13 +296,13 @@
     <div class="header-mobile__bar">
         <div class="container-fluid clearfix">
             <a class="logo" href="index1.html">
-                <img src="images/icon/logo-black.png" alt="Umber" />
+                <img src="assets/images/icon/logo-black.png" alt="Umber" />
             </a>
             <button class="hamburger hamburger--slider float-right" type="button">
-              <span class="hamburger-box">
-                  <span class="hamburger-inner"></span>
-              </span>
-          </button>
+                        <span class="hamburger-box">
+                            <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
         </div>
     </div>
     <nav class="navbar-mobile">
@@ -117,28 +312,223 @@
                     <a href="#">Services</a>
                     <ul class="navbar-mobile__dropdown list-unstyled">
                         <li>
-                            <a href="">Home Cleaning</a>
+                            <a routerLink="/requests">
+                                <span class="col-2 float-left">
+                                            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+                                            <g>
+                                                <path style="fill:#78B9EB;" d="M216.348,376h-176h-8l-8,96h32v-64v64h24v-64v64h24v-64v64h24v-64v64h24v-64v64h24v-64v64h24v-64v64
+                                                    h32l-8-96H216.348z"/>
+                                                <path style="fill:#78B9EB;" d="M280.348,280l8,192h144l8-192H280.348z"/>
+                                            </g>
+                                            <g>
+                                                <path style="fill:#1E81CE;" d="M224.348,368v-11.08L184.756,312h-32.408V0h-48v312H72.052l-39.704,45.048V368h-7.36l-9.336,112
+                                                    h225.392l-9.336-112H224.348z M136.348,16v8h-16v-8H136.348z M120.348,40h16v272h-16V40z M48.348,363.096L79.268,328h98.264
+                                                    l30.816,34.968V368h-160L48.348,363.096z M208.348,464v-56h-16v56h-8v-56h-16v56h-8v-56h-16v56h-8v-56h-16v56h-8v-56h-16v56h-8v-56
+                                                    h-16v56h-8v-56h-16v56H33.044l6.664-80h177.28l6.664,80H208.348z"/>
+                                                <path style="fill:#1E81CE;" d="M456.348,272v-56c-0.057-48.577-39.423-87.943-88-88h-16c-48.577,0.057-87.943,39.423-88,88v56h-8
+                                                    v16h16.32l8,192H440.02l8-192h16.328v-16H456.348z M280.348,216c0.044-39.746,32.254-71.956,72-72h16
+                                                    c39.746,0.044,71.956,32.254,72,72v56h-160V216z M424.676,464H296.02l-7.328-176h143.312L424.676,464z"/>
+                                                <path style="fill:#1E81CE;" d="M400.348,304h16v16h-16V304z"/>
+                                                <path style="fill:#1E81CE;" d="M400.348,328h16v16h-16V328z"/>
+                                                <path style="fill:#1E81CE;" d="M376.348,304h16v16h-16V304z"/>
+                                            </g>
+
+                                            </svg>
+
+                                        </span>
+                                <span class="col-10 float-left">
+                                            <b href="">Home Cleaning</b>
+                                            <p>Sed ut perspiciatis unde </p>
+                                        </span>
+                            </a>
                         </li>
                         <li>
-                            <a href="">Handyman </a>
+                            <a routerLink="/requests">
+                                <span class="col-2 float-left">
+                                            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+                                            <g>
+                                                <path style="fill:#78B9EB;" d="M148,8H52v80h96V8z"/>
+                                                <path style="fill:#78B9EB;" d="M428,88V8H148v80H428z M188,32c8.837,0,16,7.163,16,16s-7.163,16-16,16s-16-7.163-16-16
+                                                    S179.163,32,188,32z"/>
+                                                <circle style="fill:#78B9EB;" cx="244" cy="256" r="104"/>
+                                            </g>
+                                            <g>
+                                                <path style="fill:#1E81CE;" d="M44,0v480h392V0H44z M420,80H156V16h264V80z M420,96v320H60V96H420z M140,16v64H60V16H140z M60,464
+                                                    v-32h360v32H60z"/>
+                                                <path style="fill:#1E81CE;" d="M76,40h16v16H76V40z"/>
+                                                <path style="fill:#1E81CE;" d="M108,40h16v16h-16V40z"/>
+                                                <path style="fill:#1E81CE;" d="M188,72c13.255,0,24-10.745,24-24s-10.745-24-24-24s-24,10.745-24,24S174.745,72,188,72z M188,40
+                                                    c4.418,0,8,3.582,8,8s-3.582,8-8,8s-8-3.582-8-8S183.582,40,188,40z"/>
+                                                <path style="fill:#1E81CE;" d="M228,40h144v16H228V40z"/>
+                                                <path style="fill:#1E81CE;" d="M388,40h16v16h-16V40z"/>
+                                                <path style="fill:#1E81CE;" d="M244,400c79.529,0,144-64.471,144-144s-64.471-144-144-144s-144,64.471-144,144
+                                                    C100.093,335.491,164.509,399.907,244,400z M244,128c70.692,0,128,57.308,128,128s-57.308,128-128,128s-128-57.308-128-128
+                                                    C116.084,185.342,173.342,128.084,244,128z"/>
+                                                <path style="fill:#1E81CE;" d="M244,368c61.856,0,112-50.144,112-112s-50.144-112-112-112s-112,50.144-112,112
+                                                    C132.066,317.828,182.172,367.934,244,368z M244,160c53.019,0,96,42.981,96,96s-42.981,96-96,96s-96-42.981-96-96
+                                                    C148.057,203.004,191.004,160.057,244,160z"/>
+                                                <path style="fill:#1E81CE;" d="M388,440h16v16h-16V440z"/>
+                                                <path style="fill:#1E81CE;" d="M356,440h16v16h-16V440z"/>
+                                                <path style="fill:#1E81CE;" d="M76,440h16v16H76V440z"/>
+                                                <path style="fill:#1E81CE;" d="M76,136h16v16H76V136z"/>
+                                                <path style="fill:#1E81CE;" d="M76,112h16v16H76V112z"/>
+                                                <path style="fill:#1E81CE;" d="M100,112h16v16h-16V112z"/>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            </svg>
+                                        </span>
+                                <span class="col-10 float-left">
+                                            <b href="">Laundry</b>
+                                            <p>Sed ut perspiciatis unde </p>
+                                        </span>
+                            </a>
                         </li>
                         <li>
-                            <a href="">Interior Painting</a>
+                            <a routerLink="/requests">
+                                <span class="col-2 float-left">
+                                            <?xml version="1.0" encoding="iso-8859-1"?>
+                                            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+                                            <g>
+                                                <path style="fill:#78B9EB;" d="M376,199.872h-32h-32h-32h-32h-32h-32h-32v48h256v-48H376z"/>
+                                                <path style="fill:#78B9EB;" d="M72,279.872h336v144H72V279.872z"/>
+                                            </g>
+                                            <g>
+                                                <path style="fill:#1E81CE;" d="M480,199.872h-8v-128H255.696L42.016,16.128l-4,15.488l154.288,40.256H8v128H0v64h32v200h416v-200
+                                                    h32V199.872z M456,87.872v112h-8v-40h-16v-32h-16v-14.176l-98.976-25.824L456,87.872z M416,143.872v16h-16v-16H416z M24,87.872
+                                                    h229.64L400,126.048v1.824h-16v32H32v40h-8V87.872z M16,247.872v-32h16v32H16z M432,447.872H48v-272h384V447.872z M464,247.872h-16
+                                                    v-32h16V247.872z"/>
+                                                <path style="fill:#1E81CE;" d="M96,255.872c17.673,0,32-14.327,32-32s-14.327-32-32-32s-32,14.327-32,32S78.327,255.872,96,255.872
+                                                    z M96,207.872c8.837,0,16,7.163,16,16s-7.163,16-16,16s-16-7.163-16-16S87.163,207.872,96,207.872z"/>
+                                                <path style="fill:#1E81CE;" d="M144,255.872h272v-64H144V255.872z M160,207.872h16v8h16v-8h16v8h16v-8h16v8h16v-8h16v8h16v-8h16v8
+                                                    h16v-8h16v8h16v-8h16v8h16v-8h16v32H160V207.872z"/>
+                                                <path style="fill:#1E81CE;" d="M64,431.872h352v-160H64V431.872z M80,287.872h320v128H80V287.872z"/>
+                                                <path style="fill:#1E81CE;" d="M104,311.872h16v16h-16V311.872z"/>
+                                                <path style="fill:#1E81CE;" d="M136,311.872h16v16h-16V311.872z"/>
+                                                <path style="fill:#1E81CE;" d="M168,311.872h16v16h-16V311.872z"/>
+                                                <path style="fill:#1E81CE;" d="M200,311.872h16v16h-16V311.872z"/>
+                                                <path style="fill:#1E81CE;" d="M232,311.872h16v16h-16V311.872z"/>
+                                                <path style="fill:#1E81CE;" d="M264,311.872h16v16h-16V311.872z"/>
+                                                <path style="fill:#1E81CE;" d="M296,311.872h16v16h-16V311.872z"/>
+                                                <path style="fill:#1E81CE;" d="M328,311.872h16v16h-16V311.872z"/>
+                                                <path style="fill:#1E81CE;" d="M360,311.872h16v16h-16V311.872z"/>
+                                                <path style="fill:#1E81CE;" d="M104,343.872h16v16h-16V343.872z"/>
+                                                <path style="fill:#1E81CE;" d="M136,343.872h16v16h-16V343.872z"/>
+                                                <path style="fill:#1E81CE;" d="M168,343.872h16v16h-16V343.872z"/>
+                                                <path style="fill:#1E81CE;" d="M200,343.872h16v16h-16V343.872z"/>
+                                                <path style="fill:#1E81CE;" d="M232,343.872h16v16h-16V343.872z"/>
+                                                <path style="fill:#1E81CE;" d="M264,343.872h16v16h-16V343.872z"/>
+                                                <path style="fill:#1E81CE;" d="M296,343.872h16v16h-16V343.872z"/>
+                                                <path style="fill:#1E81CE;" d="M328,343.872h16v16h-16V343.872z"/>
+                                                <path style="fill:#1E81CE;" d="M360,343.872h16v16h-16V343.872z"/>
+                                                <path style="fill:#1E81CE;" d="M104,375.872h16v16h-16V375.872z"/>
+                                                <path style="fill:#1E81CE;" d="M136,375.872h16v16h-16V375.872z"/>
+                                                <path style="fill:#1E81CE;" d="M168,375.872h16v16h-16V375.872z"/>
+                                                <path style="fill:#1E81CE;" d="M200,375.872h16v16h-16V375.872z"/>
+                                                <path style="fill:#1E81CE;" d="M232,375.872h16v16h-16V375.872z"/>
+                                                <path style="fill:#1E81CE;" d="M264,375.872h16v16h-16V375.872z"/>
+                                                <path style="fill:#1E81CE;" d="M296,375.872h16v16h-16V375.872z"/>
+                                                <path style="fill:#1E81CE;" d="M328,375.872h16v16h-16V375.872z"/>
+                                                <path style="fill:#1E81CE;" d="M360,375.872h16v16h-16V375.872z"/>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            </svg>
+                                        </span>
+                                <span class="col-10 float-left">
+                                            <b href="">Electricals</b>
+                                            <p>Sed ut perspiciatis unde </p>
+                                        </span>
+                            </a>
                         </li>
                         <li>
-                            <a href="">Errands</a>
+                            <a routerLink="/requests">
+                                <span class="col-2 float-left">
+                                            <?xml version="1.0" encoding="iso-8859-1"?>
+                                            <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+                                            <g>
+                                                <path style="fill:#78B9EB;" d="M176,404c0,35.346,28.654,64,64,64s64-28.654,64-64V284H176V404z"/>
+                                                <path style="fill:#78B9EB;" d="M352,92v16h32V76c0-8.837-7.163-16-16-16h-96v32H352z"/>
+                                                <path style="fill:#78B9EB;" d="M128,60h-16c-8.837,0-16,7.163-16,16v32h32V92h80V60H128z"/>
+                                                <path style="fill:#78B9EB;" d="M256,28c0-8.837-7.163-16-16-16c-8.837,0-16,7.163-16,16v32h32V28z"/>
+                                            </g>
+                                            <g>
+                                                <path style="fill:#1E81CE;" d="M280,164v-64h64v16h48V76c0-13.255-10.745-24-24-24H264V28c0-13.255-10.745-24-24-24
+                                                    c-13.255,0-24,10.745-24,24v24H112c-13.255,0-24,10.745-24,24v40h48v-16h64v64H0v56c0.044,39.746,32.254,71.956,72,72h96v112
+                                                    c0,39.764,32.236,72,72,72s72-32.236,72-72V292h96c39.746-0.044,71.956-32.254,72-72v-56H280z M280,68h88c4.418,0,8,3.582,8,8v24
+                                                    h-16V84h-80V68z M232,28c0-4.418,3.582-8,8-8s8,3.582,8,8v24h-16V28z M120,84v16h-16V76c0-4.418,3.582-8,8-8h88v16H120z M216,100
+                                                    V68h48v96h-48V100z M296,404c0,30.928-25.072,56-56,56s-56-25.072-56-56V292h112V404z M464,220c-0.04,30.911-25.089,55.96-56,56H72
+                                                    c-30.911-0.04-55.96-25.089-56-56v-40h448V220z"/>
+                                                <path style="fill:#1E81CE;" d="M360,132h16v16h-16V132z"/>
+                                                <path style="fill:#1E81CE;" d="M322.749,125.91l11.319-11.319l11.314,11.314l-11.319,11.319L322.749,125.91z"/>
+                                                <path style="fill:#1E81CE;" d="M390.627,125.9l11.314-11.314l11.319,11.319l-11.314,11.314L390.627,125.9z"/>
+                                                <path style="fill:#1E81CE;" d="M104,132h16v16h-16V132z"/>
+                                                <path style="fill:#1E81CE;" d="M134.623,125.937l11.314-11.314l11.319,11.319l-11.314,11.314L134.623,125.937z"/>
+                                                <path style="fill:#1E81CE;" d="M66.745,125.947l11.319-11.319l11.314,11.314L78.058,137.26L66.745,125.947z"/>
+                                                <path style="fill:#1E81CE;" d="M432,196h16v16h-16V196z"/>
+                                                <path style="fill:#1E81CE;" d="M432,220h16v16h-16V220z"/>
+                                                <path style="fill:#1E81CE;" d="M408,196h16v16h-16V196z"/>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            <g>
+                                            </g>
+                                            </svg>
+                                        </span>
+                                <span class="col-10 float-left">
+                                            <b href="">Plumbing</b>
+                                            <p>Sed ut perspiciatis unde </p>
+                                        </span>
+                            </a>
                         </li>
-                        <li>
-                            <a href="">Maid Service</a>
-                        </li>
-                        <li class="alle text-center">
-                            <a href="cats.html">See All</a>
+                        <li class="alle">
+                            <a routerLink="/requests">
+
+                                <span class="col-2 float-left">
+                                            <?xml version="1.0" encoding="iso-8859-1"?>
+                                                <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+                                                <g>
+                                                    <g>
+                                                        <g>
+                                                            <path d="M472,128.4h-56c-4.418,0-8,3.582-8,8v16h-40c-4.418,0-8,3.582-8,8H120c0-4.418-3.582-8-8-8H72v-16c0-4.418-3.582-8-8-8H8     c-4.418,0-8,3.582-8,8v160c0,4.418,3.582,8,8,8h56c4.418,0,8-3.582,8-8v-16h40c4.418,0,8-3.582,8-8h39.648l58.136,58.136     c9.335,9.353,24.486,9.368,33.839,0.033c0.011-0.011,0.022-0.022,0.033-0.033l5.72-5.68c3.003,3.016,7.088,4.704,11.344,4.688     c4.258,0.01,8.343-1.683,11.344-4.704l11.272-11.2l5.6,5.544c2.999,3.018,7.081,4.709,11.336,4.696     c4.261,0.016,8.351-1.678,11.352-4.704l11.272-11.2l5.6,5.544c3,3.016,7.082,4.707,11.336,4.696     c4.254,0.018,8.337-1.671,11.336-4.688l11.28-11.28l0.064-0.072c5.853-5.977,6.152-15.442,0.688-21.776H408v16     c0,4.418,3.582,8,8,8h56c4.418,0,8-3.582,8-8v-160C480,131.982,476.418,128.4,472,128.4z M56,288.4H16v-144h40V288.4z M104,256.4     H72v-80h32V256.4z M347.856,302.136l-5.6-5.544c-3.001-3.014-7.083-4.702-11.336-4.688c-4.261-0.01-8.35,1.681-11.36,4.696     l-11.264,11.2l-5.6-5.552c-3.003-3.016-7.088-4.704-11.344-4.688c-4.258-0.01-8.343,1.683-11.344,4.704l-11.384,11.112     c-6.356-5.938-16.245-5.871-22.52,0.152l-5.68,5.68c-3.144,3.013-8.104,3.013-11.248,0l-60.48-60.48     c-1.522-1.514-3.589-2.353-5.736-2.328H120v-80h100.688l-18.896,18.896c-4.526,4.477-7.072,10.578-7.072,16.944     c-0.018,0.947,0.063,1.893,0.24,2.824c0.576,5.374,2.986,10.386,6.824,14.192c3.751,3.771,8.681,6.143,13.968,6.72     c0.959,0.238,1.953,0.306,2.936,0.2c6.372,0.151,12.519-2.356,16.968-6.92l20.936-20.856h20.088l82.456,82.584L347.856,302.136z      M360,256.4h-12.688l-61.656-61.656c-1.5-1.5-3.534-2.344-5.656-2.344h-26.72c-2.122,0-4.156,0.844-5.656,2.344l-23.28,23.2     c-1.455,1.521-3.497,2.338-5.6,2.24c-0.152,0-0.464-0.056-0.456,0l-0.584-0.064c-1.755-0.127-3.403-0.893-4.632-2.152     c-1.292-1.252-2.09-2.928-2.248-4.72c-0.022-0.355-0.067-0.707-0.136-1.056c0.037-2.095,0.899-4.09,2.4-5.552l30.224-30.24H360     V256.4z M408,256.4h-32v-80h32V256.4z M464,288.4h-40v-144h40V288.4z" fill="#FFFFFF"/>
+                                                            <rect x="384" y="184.4" width="16" height="16" fill="#FFFFFF"/>
+                                                            <rect x="80" y="184.4" width="16" height="16" fill="#FFFFFF"/>
+                                                            <rect x="134.624" y="319.029" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 53.1878 676.0904)" width="64" height="16" fill="#FFFFFF"/>
+                                                            <rect x="115.31" y="341.658" transform="matrix(-0.7071 -0.7071 0.7071 -0.7071 17.872 706.7186)" width="80" height="16" fill="#FFFFFF"/>
+                                                            <rect x="256" y="120.4" width="64" height="16" fill="#FFFFFF"/>
+                                                            <rect x="256" y="96.4" width="80" height="16" fill="#FFFFFF"/>
+                                                        </g>
+                                                    </g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                <g>
+                                                </g>
+                                                </svg>
+
+                                        </span>
+                                <span class="col-10 float-left">
+                                            <b>Join Trudy</b>
+                                            <p class="text-white">Sed ut perspiciatis unde omnis</p>
+                                        </span>
+                            </a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="">
-                    <a href="#">About Us</a>
+                    <a routerLink="/requests">About Us</a>
                 </li>
                 <li class="">
                     <a href="#">How it works</a>
@@ -146,11 +536,11 @@
                 <li class="">
                     <a href="contact.html">Contact</a>
                 </li>
-                <li class="">
-                    <a [routerLink]="['/requests']">Request Pro</a>
+                <li class="list-inline-item has-dropdown">
+                    <a routerLink="/requests">Request Pro</a>
                 </li>
                 <li class="proff">
-                    <a href="login.html">
+                    <a routerLink="/login">
                         <i class="icon-user-outline"></i>
                         <span class="smcaps">Jadeline Doe <i class="icon-cheveron-down"></i></span>
                     </a>
@@ -159,4 +549,5 @@
         </div>
     </nav>
 </header>
+
 <!-- END HEADER MOBILE-->

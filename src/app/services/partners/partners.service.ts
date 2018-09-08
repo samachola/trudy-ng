@@ -28,6 +28,18 @@ export class PartnersService {
                     .catch(this.handleError);
 
   }
+
+  /**
+   * Get all categories.
+   *
+   * @returns {Observable} - List of categories.
+   */
+  getCategories() {
+    return this.http.get(`${this.apiBaseUrl}/categories`)
+                    .map(this.handleResponse)
+                    .catch(this.handleError);
+  }
+
   /**
    * Handle response from server.
    *

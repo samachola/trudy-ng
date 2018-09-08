@@ -7,16 +7,32 @@ import { PartnersService } from '../../services/partners/partners.service';
   styleUrls: ['./requests.component.css']
 })
 export class RequestsComponent implements OnInit {
-	partners = [];
+  partners = [];
+  query = {};
   constructor(private partnersService: PartnersService) { }
 
   ngOnInit() {
-		this.partnersService.getAllPartners()
-												.toPromise()
-												.then((res) => {
-													this.partners = res;
-												})
-												.catch(err => console.log(err));
+    this.getCategories();
+    this.partnersService.getAllPartners()
+                  .toPromise()
+                  .then((res) => {
+                    this.partners = res;
+                    console.table(this.partners);
+                  })
+                  .catch(err => console.log(err));
+  }
+
+  // Gets partners based on the filter.
+  filterPartner() {
+    console.log(this.query);
+  }
+
+  // get categories
+  getCategories() {
+    this.partnersService.getCategories()
+                  .toPromise()
+                  .then(res => console.log(res))
+                  .catch(err => console.log(err));
   }
 
 }

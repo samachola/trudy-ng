@@ -20,12 +20,15 @@ import { DashboardComponent } from './components/admin/dashboard/dashboard.compo
 import { MenuComponent } from './components/admin/widgets/menu/menu.component';
 import { HomeComponent } from './components/home/home.component';
 import { RequestsComponent } from './components/requests/requests.component';
+import { ProfileComponent } from './components/profile/profile.component';
+import { AgmCoreModule } from '@agm/core';
 
 const routes: Routes = [
-  { path: '', component: LandingComponent },
+  { path: '', component: HomeComponent },
   { path: 'login', component: LandingComponent },
   { path: 'dashboard', component: DashboardComponent },
-  { path: 'requests', component: RequestsComponent }
+  { path: 'requests', component: RequestsComponent },
+  { path: 'profile/:id', component: ProfileComponent },
 ];
 @NgModule({
   declarations: [
@@ -38,13 +41,18 @@ const routes: Routes = [
     DashboardComponent,
     MenuComponent,
     HomeComponent,
-    RequestsComponent
+    RequestsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot(routes, { useHash: true })
+    RouterModule.forRoot(routes, { useHash: true }),
+		AgmCoreModule.forRoot({
+			apiKey: 'AIzaSyCi5s8s6hthogs8ch_fdtPLbOUFmZHGPso',
+			libraries: ['places'],
+		}),
   ],
   providers: [
     AuthService,

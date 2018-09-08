@@ -1,3 +1,5 @@
+
+
 $(document).ready(function() {
   $("#button").click(function(e) {
     e.stopPropagation();
@@ -12,6 +14,18 @@ $(document).ready(function() {
     }, 1);*/
   });
 
+
+        $(".reqform").click(function() {
+          $('.soluted').toggleClass('showluted'); 
+        });
+
+/*        $(".risto.showtrigd").on('hover', function (e) {
+            alert();
+          $(this).removeClass('showtrigd');
+        });*/
+
+
+$('.collapse').collapse();
 
   $("#menuClose, #menuContent a").click(function() {
     $("#menu").removeClass("menuTransition");

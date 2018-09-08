@@ -15,17 +15,19 @@ export class LoginComponent implements OnInit {
     private router: Router
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    localStorage.clear();
+  }
 
   onSubmit() {
     this.auth.login(this.user)
              .toPromise()
              .then((res) => {
                localStorage.setItem('token', res.token);
-               this.router.navigate(['dashboard']);
+               localStorage.setItem('user', JSON.stringify(res.user));
+               this.router.navigate(['requests']);
              })
              .catch((err) => {
-							 this.router.navigate(['dashboard']);
                this.error = err.email || err.password || err.error;
              });
   }

@@ -1,464 +1,249 @@
-<div class="page-wrapper text-white">
+<div id="main-wrapper" class="page-wrapper">
+    <!-- ============================================================== -->
+    <!-- Topbar header - style you can find in pages.scss -->
+    <!-- ============================================================== -->
     <!-- HEADER DESKTOP-->
-    <header class="header-desktop header-1 d-none d-lg-block">
-        <div class="container">
-            <div class="section__content section__content--w1760">
-                <div class="row header__content">
-                    <div class="col-md-5">
-
-                        <nav class="nav-header">
-                            <ul class="list-unstyled list-inline">
-
-
-
-                                <li class="list-inline-item has-dropdown">
-                                    <a href="about-me.html">Services</a>
-                                    <ul class="dropdown-list list-unstyled is-right">
-                                        <li>
-                                            <a href="">Home Cleaning</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Handyman </a>
-                                        </li>
-                                        <li>
-                                            <a href="">Interior Painting</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Errands</a>
-                                        </li>
-                                        <li>
-                                            <a href="">Maid Service</a>
-                                        </li>
-                                        <li class="alle text-center">
-                                            <a href="cats.html">See All</a>
-                                        </li>
-                                    </ul>
-                                </li>
-
-                                <li class="list-inline-item has-mega">
-                                    <a href="about-us2.html">About Us</a>
-                                </li>
-                                <li class="list-inline-item has-dropdown">
-                                    <a href="#">How it works</a>
-                                </li>
-                            </ul>
-                        </nav>
-
-                    </div>
-                    <div class="col-md-1 logo-wrap">
-                        <a href="index.html" class="col-md-12">
-                            <img src="assets/images/icon/logo-black.png" alt="" />
-                        </a>
-                    </div>
-                    <div class="col-md-5 navheader-wrap ml-auto">
-                        <nav class="nav-header">
-                            <ul class="list-unstyled list-inline">
-                                <li class="list-inline-item has-dropdown">
-                                    <a href="contact.html">Contact</a>
-                                </li>
-                                <li class="list-inline-item has-dropdown">
-                                    <a href="login.html">Request PRO</a>
-                                </li>
-
-                                <li class="list-inline-item has-dropdown">
-                                    <a href="login.html">Login</a>
-                                </li>
-                                <li class="list-inline-item proff">
-                                    <a href="login.html">
-                                        <i class="icon-user-outline"></i>
-                                        <span class="smcaps">Jadeline Doe <i class="icon-cheveron-down"></i></span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </nav>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- SEARCH MODAL-->
-    <div class="modal fade" id="searchModal" role="dialog">
-        <button class="close" type="button" data-dismiss="modal">
-          <i class="zmdi zmdi-close"></i>
-      </button>
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-body">
-                    <form id="searchModal__form" method="POST">
-                        <input id="searchModal__input" type="text" name="search" placeholder="Search here..." />
-                        <button id="searchModal__submit" type="submit">
-                          <i class="fa fa-search"></i>
-                      </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- END SEARCH MODAL-->
-    <!-- END HEADER DESKTOP-->
-
-    <!-- HEADER MOBILE-->
-    <header class="header-mobile d-block d-lg-none">
-        <div class="header-mobile__bar">
-            <div class="container-fluid clearfix">
-                <a class="logo" href="index1.html">
-                    <img src="assets/images/icon/logo-black.png" alt="Umber" />
-                </a>
-                <button class="hamburger hamburger--slider float-right" type="button">
-                  <span class="hamburger-box">
-                      <span class="hamburger-inner"></span>
-                  </span>
-              </button>
-            </div>
-        </div>
-        <nav class="navbar-mobile">
-            <div class="container-fluid">
-                <ul class="navbar-mobile__list list-unstyled">
-                    <li class="list-inline-item has-dropdown">
-                        <a href="about-me.html">Services</a>
-                        <ul class="dropdown-list list-unstyled is-right">
-                            <li>
-                                <a href="">Home Cleaning</a>
-                            </li>
-                            <li>
-                                <a href="">Handyman </a>
-                            </li>
-                            <li>
-                                <a href="">Interior Painting</a>
-                            </li>
-                            <li>
-                                <a href="">Errands</a>
-                            </li>
-                            <li>
-                                <a href="">Maid Service</a>
-                            </li>
-                            <li class="alle text-center">
-                                <a href="cats.html">See All</a>
-                            </li>
-                        </ul>
-                    </li>
-
-                    <li class="list-inline-item has-mega">
-                        <a href="about-us2.html">About Us</a>
-                    </li>
-                    <li class="list-inline-item has-dropdown">
-                        <a href="#">How it works</a>
-                    </li>
-                    <li class="list-inline-item has-dropdown">
-                        <a href="contact.html">Contact</a>
-                    </li>
-                    <li class="list-inline-item has-dropdown">
-                        <a href="login.html">Register</a>
-                    </li>
-                    <li class="list-inline-item proff">
-                        <a href="login.html">
-                            <i class="icon-user-outline"></i>
-                            <span class="smcaps">Jadeline Doe <i class="icon-cheveron-down"></i></span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+    <app-header></app-header>
     <!-- END HEADER MOBILE-->
-    <!-- SILDER-->
-    <section class="slide slide-1">
-        <div class="container-fluid">
-            <div class="section__content section__content--w1760">
-                <div class="slide-wrapper js-slick-wrapper" data-slick-autoplay="true" data-slick-fade="true">
-                    <div class="slide__content js-slick-content">
-                        <div class="slide-item">
-                            <img src="assets/images/slide-01.jpg" alt="Slide 1">
-                            <div class="slide__caption js-first-slick clearfix d-none d-lg-block" data-animation="fadeInUp" data-animation-delay=".1s">
-                                <div class="number float-left">01</div>
-                                <h2 class="text">EVERY PICTURE HAVE STORY TO TELL</h2>
-                                <div class="search-btn-wrap">
+    <section class="home-blackwhite-intro fullscreen-section" style="background:url('assets/images/electrician.jpg') center center /cover no-repeat fixed;">
+        <span class="bg-overlay bg-overlay--opa60"></span>
+        <div class="home-blackwhite-intro__inner">
+            <div class="container">
+                <article class="col-md-7 text-white">
+                    <h2 class="wow fadeInRight" data-wow-delay=".2s" data-wow-duration="1s">Electricians</h2>
+                    <p class="wow fadeInUp text-white" data-wow-delay=".6s" data-wow-duration="1s">
+                    Does a switch or outlet give a mild shock? Does your house have fewer electrical outlets? Does your
+                    living room look like a snake farm with wires running under the rugs and furniture?
+                    Such instances pose a great risk to the safety of both your loved ones and your household property.
+                    From fixing faulty outlets to running wires to new electrical appliances Trudy has u covered.
+                    Trudy connects you with experienced electricians who ensure that your house is nothing short of a
+                    safe haven for your loved ones.</p>
+                </article>
 
-                                </div>
-                            </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
+                    <div class="statistic__item">
+                        <div class="number-wrap">
+                            <h4 class="text-pink number js-counter-up" data-counterup-time="1000">30</h4>
                         </div>
-                        <div class="slide-item">
-                            <img src="assets/images/slide-02.jpg" alt="Slide 2">
-                            <div class="slide__caption clearfix d-none d-lg-block" data-animation="fadeInUp" data-animation-delay=".1s">
-                                <div class="number float-left">02</div>
-                                <h2 class="text">Eyes like a shutter mind like a lens</h2>
-                            </div>
-                        </div>
-                        <div class="slide-item">
-                            <img src="assets/images/slide-03.jpg" alt="Slide 3">
-                            <div class="slide__caption clearfix d-none d-lg-block" data-animation="fadeInUp" data-animation-delay=".1s">
-                                <div class="number float-left">03</div>
-                                <h2 class="text">let’s photograph what you love</h2>
-                            </div>
-                        </div>
+                        <h6 class="text-white">Electricians available</h6>
+                        <a href="request.html" class="au-btn au-btn--dark au-btn--p50 m-t-30 js-load-btn" href="#">View All</a>
                     </div>
-                    <div class="slide-arrows">
-                        <i class="zmdi zmdi-arrow-left js-slick-arrow-left prev"></i>
-                        <i class="zmdi zmdi-arrow-right js-slick-arrow-right next"></i>
-                    </div>
+                </div>
 
-                    <div class="col-12">
-                        <div class="cuscard text-primary bg-white mb-3 float-left col-md-3 p-3 mb-5">
-                            <div class="card-icon col-md-3 float-left"><i class="icon-truck"></i></div>
-                            <div class="col-md-8 float-right">
-                                <h5 class="card-title">Transport</h5>
-                                <p class="card-text">No of service providers registered as plumbers </p>
-                            </div>
-                        </div>
-                        <div class="cuscard text-primary bg-white mb-3 float-left col-md-3 p-3 mb-5">
-                            <div class="card-icon col-md-3 float-left"><i class="icon-t-shirt"></i></div>
-                            <div class="col-md-8 float-right">
-                                <h5 class="card-title">Laundry</h5>
-                                <p class="card-text">No of service providers for laundry </p>
-                            </div>
-                        </div>
-                        <div class="cuscard text-primary bg-white mb-3 float-left col-md-3 p-3 mb-5">
-                            <div class="card-icon col-md-3 float-left"><i class="icon-shop"></i></div>
-                            <div class="col-md-8 float-right">
-                                <h5 class="card-title">Houskeeping</h5>
-                                <p class="card-text">No of service providers for laundry </p>
-                            </div>
-                        </div>
-                        <div class="cuscard text-primary bg-white mb-3 float-left col-md-3 p-3 mb-5">
-
-                            <button class="search-btn col-12 text-left" data-toggle="modal" data-target="#searchModal">
-                            <div class="card-icon col-md-3 float-left"><i class="icon-search"></i></div>
-                            <div class="col-md-8 float-right">
-                              <h5 class="card-title">Search</h5>
-                              <p class="card-text">Search for a professional </p>
-                            </div>
-                          </button>
-                        </div>
-                    </div>
-
-
+                <div class="wrapscrolly">
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- END SLIDER-->
 
-    <!-- HOME SLIDE 2-->
-    <section class="home-slide2">
-        <div class="slide-wrapper js-slick-wrapper pt-5 vhsok" data-slick-autoplay="false" data-slick-fade="true">
-            <div class="slide__content js-slick-content">
-                <div class="slide-item">
-                    <div class="home-slide2__img-left">
-                        <div class="home-slide2__img-left-wrap" data-animation="fadeIn" data-animation-delay=".3s">
-                            <img src="assets/images/home-slider-4-1.jpg" alt="Love in the eyes 1">
-                            <div class="bg-layer"></div>
+
+    <!-- STATISTIC-->
+    <section class="home-blackwhite-intro js-parallax-scroll p-t-445 p-b-30" style="background: url('assets/images/errands.jpg') center center / cover no-repeat fixed;">
+        <div class="bg-overlay bg-overlay--opa60"></div>
+     
+        <div class="home-blackwhite-intro__inner">
+            <div class="container">
+                <article class="col-md-7 text-white">
+                    <h2 class="wow fadeInRight" data-wow-delay=".2s" data-wow-duration="1s">Errands/Delivery</h2>
+                    <p class="wow fadeInUp text-white" data-wow-delay=".6s" data-wow-duration="1s">Sed ut perspiciatis unde omnis iste natus error sit volupta accusantium doloremque laudantium, totam rem aperi, eaque ipsa quae ab illo inventore veritatis </p>
+                </article>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
+                    <div class="statistic__item">
+                        <div class="number-wrap">
+                            <h4 class="text-pink number js-counter-up" data-counterup-time="1000">30</h4>
                         </div>
-                        <div class="home-slide2__img-left-content">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-7 col-12 offset-lg-1">
-                                        <div class="content clearfix">
-                                            <h2 data-animation="fadeInLeft" data-animation-delay=".3s">
-                                                <span class="light">Love</span> in the work done
-                                            </h2>
-                                            <div class="text-wrap">
-                                                <p data-animation="fadeInRight" data-animation-delay=".4s">Lorem ipsum dolor sit amet, consec teturts adipiscing elit, sed do eiusmod tempor alt incididunt ut labore et dolore magna balid ut enim adtional.</p>
-                                                <a class="au-btn au-btn--border au-btn--p45 au-btn--effect" href="#" data-animation="fadeInRight" data-animation-delay=".7s">see more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide-item__inner clearfix">
-                        <div class="section__content section__content--w1760">
-                            <div class="container-fluid">
-                                <div class="slide-item__inner-wrap clearfix">
-                                    <div class="home-slide2__img-right">
-                                        <img src="assets/images/home-slider-4-2.jpg" alt="Love in the eyes 2">
-                                        <div class="slide-arrows clearfix">
-                                            <span class="prev js-slick-arrow-left float-left">
-                                              <i class="zmdi zmdi-arrow-left"></i>prev </span>
-                                            <span class="next js-slick-arrow-right float-right">next
-                                              <i class="zmdi zmdi-arrow-right"></i>
-                                          </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <h6 class="text-white">Errand pros available</h6>
+                        <a href="request.html" class="au-btn au-btn--dark au-btn--p50 m-t-30 js-load-btn" href="#">View All</a>
                     </div>
                 </div>
-                <div class="slide-item">
-                    <div class="home-slide2__img-left">
-                        <div class="home-slide2__img-left-wrap" data-animation="fadeIn" data-animation-delay=".3s">
-                            <img src="assets/images/home-slider-5-1.jpg" alt="Lost in the city 1">
-                            <div class="bg-layer"></div>
-                        </div>
-                        <div class="home-slide2__img-left-content">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-7 col-12 offset-lg-1">
-                                        <div class="content clearfix">
-                                            <h2 class="m-l-20" data-animation="fadeInLeft" data-animation-delay=".3s">
-                                                <span class="light">Lost</span> in the city
-                                            </h2>
-                                            <div class="text-wrap">
-                                                <p data-animation="fadeInRight" data-animation-delay=".4s">Lorem ipsum dolor sit amet, consec teturts adipiscing elit, sed do eiusmod tempor alt incididunt ut labore et dolore magna balid ut enim adtional.</p>
-                                                <a class="au-btn au-btn--border au-btn--p45 au-btn--effect" href="#" data-animation="fadeInRight" data-animation-delay=".7s">see more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide-item__inner clearfix">
-                        <div class="section__content section__content--w1760">
-                            <div class="container-fluid">
-                                <div class="slide-item__inner-wrap clearfix">
-                                    <div class="home-slide2__img-right">
-                                        <img src="assets/images/home-slider-5-2.jpg" alt="Lost in the city 2">
-                                        <div class="slide-arrows clearfix">
-                                            <span class="prev js-slick-arrow-left float-left">
-                                              <i class="zmdi zmdi-arrow-left"></i>prev album</span>
-                                            <span class="next js-slick-arrow-right float-right">next album
-                                              <i class="zmdi zmdi-arrow-right"></i>
-                                          </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-item">
-                    <div class="home-slide2__img-left">
-                        <div class="home-slide2__img-left-wrap" data-animation="fadeIn" data-animation-delay=".3s">
-                            <img src="assets/images/home-slider-6-1.jpg" alt="Light in the cup 1">
-                            <div class="bg-layer"></div>
-                        </div>
-                        <div class="home-slide2__img-left-content">
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-lg-7 col-12 offset-lg-1">
-                                        <div class="content clearfix">
-                                            <h2 class="m-l-m5" data-animation="fadeInLeft" data-animation-delay=".3s">
-                                                <span class="light">Light</span> in the cup
-                                            </h2>
-                                            <div class="text-wrap">
-                                                <p data-animation="fadeInRight" data-animation-delay=".4s">Lorem ipsum dolor sit amet, consec teturts adipiscing elit, sed do eiusmod tempor alt incididunt ut labore et dolore magna balid ut enim adtional.</p>
-                                                <a class="au-btn au-btn--border au-btn--p45 au-btn--effect" href="#" data-animation="fadeInRight" data-animation-delay=".7s">see more</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="slide-item__inner clearfix">
-                        <div class="section__content section__content--w1760">
-                            <div class="container-fluid">
-                                <div class="slide-item__inner-wrap clearfix">
-                                    <div class="home-slide2__img-right">
-                                        <img src="assets/images/home-slider-6-2.jpg" alt="Light in the cup 2">
-                                        <div class="slide-arrows clearfix">
-                                            <span class="prev js-slick-arrow-left float-left">
-                                              <i class="zmdi zmdi-arrow-left"></i>prev album</span>
-                                            <span class="next js-slick-arrow-right float-right">next album
-                                              <i class="zmdi zmdi-arrow-right"></i>
-                                          </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="wrapscrolly">
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- END HOME SLIDE 2-->
+    <!-- END STATISTIC-->
 
 
-    <!-- RECENT BLOG-->
-    <section class="recent-blog p-t-70 hautod">
-        <div class="container">
-            <div class="recent-blog__title-wrap clearfix m-b-90">
-                <h2 class="recent-blog__title float-right wow fadeInRight" data-wow-delay=".2s">Featured Service Providers</h2>
-            </div>
-            <div class="recent-blog__item clearfix">
-                <div class="image-wrap float-lg-left">
-                    <div class="image">
-                        <a href="blog-detail.html">
-                            <img src="assets/images/blog-01.jpg" alt="PHOTOGRAPHY IS A FORM OF TIME TRAVEL" />
-                        </a>
+    <!-- STATISTIC-->
+    <section class="home-blackwhite-intro js-parallax-scroll p-t-445 p-b-30" style="background: url('assets/images/cleaninghome.jpg') center center / cover no-repeat fixed;">
+        <div class="bg-overlay bg-overlay--opa60"></div>
+     
+        <div class="home-blackwhite-intro__inner">
+            <div class="container">
+                <article class="col-md-7 text-white">
+                    <h2 class="wow fadeInRight" data-wow-delay=".2s" data-wow-duration="1s">Cleaning</h2>
+                    <p class="wow fadeInUp text-white" data-wow-delay=".6s" data-wow-duration="1s">Late nights at work preventing you from keeping your apartment tidy? Too busy taking the kids to
+                    school, practices, and playdates to vacuum the floors? We know life can be crazy and unpredictable,
+                    and when you’re tired and overworked, the last thing anybody wants to do is clean their home.
+                    Whatever the reason, Trudy has you covered by connecting you with reliable cleaning professionals
+                    in your area in seconds.
+                    Book a cleaner today.</p>
+                </article>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
+                    <div class="statistic__item">
+                        <div class="number-wrap">
+                            <h4 class="text-pink number js-counter-up" data-counterup-time="1000">30</h4>
+                        </div>
+                        <h6 class="text-white">Cleaners available</h6>
+                        <a href="request.html" class="au-btn au-btn--dark au-btn--p50 m-t-30 js-load-btn" href="#">View All</a>
                     </div>
-                    <div class="bg-layer d-none d-lg-block bg-layer--right"></div>
                 </div>
-                <div class="content content--right">
-                    <h2 class="title">
-                        <a href="blog-detail.html">PHOTOGRAPHY IS A FORM OF TIME TRAVEL</a>
-                    </h2>
-                    <p class="date">June 15 2017</p>
-                    <p class="text">Sed ut perspiciatis unde omnis iste natus error sit volupta accusantium doloremque laudantium, totam rem aperi, eaque ipsa quae ab illo inventore veritatis et quasi archit beatae vitae dicta sunt explicabo. Nemo enim ipsam alt voluptatem
-                        quia voluptas sit aspernatur aut odit aut mov fugit, sed quia consequuntur.</p>
-                    <a class="au-btn au-btn--border au-btn--p40 au-btn--border-6" href="blog-detail.html">read more</a>
-                </div>
-            </div>
-            <div class="recent-blog__item clearfix">
-                <div class="image-wrap float-lg-right">
-                    <div class="image">
-                        <a href="blog-detail.html">
-                            <img src="assets/images/blog-02.jpg" alt="SHOOT WHAT YOU LOVE" />
-                        </a>
-                    </div>
-                    <div class="bg-layer d-none d-lg-block bg-layer--left"></div>
-                </div>
-                <div class="content content--left">
-                    <h2 class="title">
-                        <a href="blog-detail.html">SHOOT WHAT YOU LOVE</a>
-                    </h2>
-                    <p class="date">March 24 2017</p>
-                    <p class="text">Sed ut perspiciatis unde omnis iste natus error sit volupta accusantium doloremque laudantium, totam rem aperi, eaque ipsa quae ab illo inventore veritatis et quasi archit beatae vitae dicta sunt explicabo. Nemo enim ipsam alt voluptatem
-                        quia voluptas sit aspernatur aut odit aut mov fugit, sed quia consequuntur.</p>
-                    <a class="au-btn au-btn--border au-btn--p40 au-btn--border-6" href="blog-detail.html">read more</a>
+                <div class="wrapscrolly">
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
                 </div>
             </div>
         </div>
     </section>
-    <!-- END RECENT BLOG-->
+    <!-- END STATISTIC-->
 
+    <!-- STATISTIC-->
+    <section class="home-blackwhite-intro js-parallax-scroll p-t-445 p-b-30" style="background: url('assets/images/plumber.jpg') center center / cover no-repeat fixed;">
+        <div class="bg-overlay bg-overlay--opa60"></div>
+     
+        <div class="home-blackwhite-intro__inner">
+            <div class="container">
+                <article class="col-md-7 text-white">
+                    <h2 class="wow fadeInRight" data-wow-delay=".4s" data-wow-duration="1s">Plumbing</h2>
+                    <p class="wow fadeInUp text-white" data-wow-delay=".6s" data-wow-duration="1s">Having trouble with a leaking pipe/ blocked toilet/ burst pipes /malfunctioning faucets in your
+                    house? A professional plumber in your area is just a click away.
+                    On Trudy u can book a professional plumber who will fix your leaking pipe/burst
+                    pipes/malfunctioning faucet/blocked toilets saving you the trouble of dealing with unbearable smell
+                    or the risk of your house/apartment flooding. </p>
+                </article>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
+                    <div class="statistic__item">
+                        <div class="number-wrap">
+                            <h4 class="text-pink number js-counter-up" data-counterup-time="1000">30</h4>
+                        </div>
+                        <h6 class="text-white">Plumbers available</h6>
+                        <a href="request.html" class="au-btn au-btn--dark au-btn--p50 m-t-30 js-load-btn" href="#">View All</a>
+                    </div>
+                </div>
+                <div class="wrapscrolly lastone">
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END STATISTIC-->
+<!-- STATISTIC-->
+    <section class="home-blackwhite-intro js-parallax-scroll p-t-445 p-b-30" style="background: url('assets/images/repair.jpg') center center / cover no-repeat fixed;">
+        <div class="bg-overlay bg-overlay--opa60"></div>
+     
+        <div class="home-blackwhite-intro__inner">
+            <div class="container">
+                <article class="col-md-7 text-white">
+                    <h2 class="wow fadeInRight" data-wow-delay=".2s" data-wow-duration="1s">Repairs</h2>
+                    <p class="wow fadeInUp text-white" data-wow-delay=".6s" data-wow-duration="1s">
+                    We all have that piece of furniture that overtime have gotten attached to and the last thing we want
+                    is to throw them away due to breakage or other damages.
+                    Worry no more as Trudy instantly connects you with repair professionals in your area who work to
+                    ensure your furniture is restored to its original look.
+                    With Trudy repair professionals you can now avoid unnecessary costs purchasing items that can be
+                    repaired.</p>
+                </article>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
+                    <div class="statistic__item">
+                        <div class="number-wrap">
+                            <h4 class="text-pink number js-counter-up" data-counterup-time="1000">145</h4>
+                        </div>
+                        <h6 class="text-white">Repiar pros available</h6>
+                        <a href="request.html" class="au-btn au-btn--dark au-btn--p50 m-t-30 js-load-btn" href="#">View All</a>
+                    </div>
+                </div>
+                <div class="wrapscrolly">
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END STATISTIC-->
+<!-- STATISTIC-->
+    <section class="home-blackwhite-intro js-parallax-scroll p-t-445 p-b-30" style="background: url('assets/images/mech.jpg') center center / cover no-repeat fixed;">
+        <div class="bg-overlay bg-overlay--opa60"></div>
+     
+        <div class="home-blackwhite-intro__inner">
+            <div class="container">
+                <article class="col-md-7 text-white">
+                    <h2 class="wow fadeInRight" data-wow-delay=".2s" data-wow-duration="1s">Mechanics</h2>
+                    <p class="wow fadeInUp text-white" data-wow-delay=".6s" data-wow-duration="1s">
+                    
+                    Having trouble with a flat tyre on the road or at home? Can’t figure out the problem with your
+                    car?
+                    Trudy has you covered by putting you in touch with available mechanics anywhere at any
+                    time, saving you time spent at the garage, helping you focus on more important projects.</p>
+                </article>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
+                    <div class="statistic__item">
+                        <div class="number-wrap">
+                            <h4 class="text-pink number js-counter-up" data-counterup-time="1000">30</h4>
+                        </div>
+                        <h6 class="text-white">Mechanics available</h6>
+                        <a href="request.html" class="au-btn au-btn--dark au-btn--p50 m-t-30 js-load-btn" href="#">View All</a>
+                    </div>
+                </div>
+                <div class="wrapscrolly">
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END STATISTIC-->
+<!-- STATISTIC-->
+    <section class="home-blackwhite-intro js-parallax-scroll p-t-445 p-b-30" style="background: url('assets/images/outdoor.jpg') center center / cover no-repeat fixed;">
+        <div class="bg-overlay bg-overlay--opa60"></div>
+     
+        <div class="home-blackwhite-intro__inner">
+            <div class="container">
+                <article class="col-md-7 text-white">
+                    <h2 class="wow fadeInRight" data-wow-delay=".2s" data-wow-duration="1s">Outdoor Services</h2>
+                    <p class="wow fadeInUp text-white" data-wow-delay=".6s" data-wow-duration="1s">
+                    Whether you are having an impromptu celebration at your house or just need a tidy
+                    backyard/compound. Trudy has you covered.
+                    From lawn mowing/trimming, fence maintenance to yard clean up, Trudy allows you to book
+                    outdoor maintenance professionals saving you the trouble of doing it on your own as well as
+                    allowing you to celebrate events outdoors in style.</p>
+                </article>
+
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay=".4s" data-wow-duration="1s">
+                    <div class="statistic__item">
+                        <div class="number-wrap">
+                            <h4 class="text-pink number js-counter-up" data-counterup-time="1000">30</h4>
+                        </div>
+                        <h6 class="text-white">Outdoor pros available</h6>
+                        <a href="request.html" class="au-btn au-btn--dark au-btn--p50 m-t-30 js-load-btn" href="#">View All</a>
+                    </div>
+                </div>
+                <div class="wrapscrolly">
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
+                  <p class="arrow arrow--bottom chevron"></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- END STATISTIC-->
 
     <!-- FOOTER-->
-    <footer class="footer footer--dark">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4">
-                    <div class="footer__logo">
-                        <a href="index1.html" class="col-2">
-                            <img src="assets/images/icon/logo-white.png" alt="" />
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="footer__social">
-                        <a href="#">
-                            <i class="zmdi zmdi-facebook"></i>
-                        </a>
-                        <a href="#">
-                            <i class="zmdi zmdi-instagram"></i>
-                        </a>
-                        <a href="#">
-                            <i class="zmdi zmdi-twitter"></i>
-                        </a>
-                        <a class="mr-0" href="#">
-                            <i class="zmdi zmdi-dribbble"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="footer__copyright">© 2018 by uxcraft</div>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <app-footer></app-footer>
     <!-- END FOOTER-->
 </div>
