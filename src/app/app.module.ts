@@ -31,6 +31,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'requests', component: RequestsComponent },
   { path: 'profile/:id', component: ProfileComponent },
+  { path: 'settings', component: SettingsComponent },
 ];
 @NgModule({
   declarations: [
