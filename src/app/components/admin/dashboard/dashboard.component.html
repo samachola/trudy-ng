@@ -1,0 +1,185 @@
+<div class="page-wrapper">
+    <!-- HEADER DESKTOP-->
+    <header class="header-pull d-none d-lg-block js-scroll-bar">
+        <div class="header-pull__inner">
+            <div class="logo">
+                <a href="index1.html">
+                    <img src="assets/images/icon/logo-black.png" alt="Trudy" />
+                </a>
+            </div>
+            <nav class="navbar-pull">
+                <ul class="navbar-pull-list list-unstyled">
+                    <li class="has-dropdown">
+                        <a href="#">Users</a>
+
+                        <ul class="navbar-pull__dropdown list-unstyled">
+                            <li>
+                                <a href="index1.html">Service Providers</a>
+                            </li>
+                            <li>
+                                <a href="index2.html">Customers</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="social">
+                <a href="#">
+                    <i class="zmdi zmdi-facebook"></i>
+                </a>
+                <a href="#">
+                    <i class="zmdi zmdi-instagram"></i>
+                </a>
+                <a href="#">
+                    <i class="zmdi zmdi-twitter"></i>
+                </a>
+                <a href="#">
+                    <i class="zmdi zmdi-dribbble"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+    <!-- SEARCH MODAL-->
+    <div class="searchModal--right modal fade" id="searchModal" role="dialog">
+        <button class="close" type="button" data-dismiss="modal">
+            <i class="zmdi zmdi-close"></i>
+        </button>
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <form id="searchModal__form" method="POST">
+                        <input id="searchModal__input" type="text" name="search" placeholder="Search here..." />
+                        <button id="searchModal__submit" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- END SEARCH MODAL-->
+    <!-- END HEADER DESKTOP-->
+
+    <!-- HEADER MOBILE  -->
+    <header class="header-mobile d-block d-lg-none">
+        <div class="header-mobile__bar">
+            <div class="container-fluid clearfix">
+                <a class="logo" href="index1.html">
+                    <img src="assets/images/icon/logo-black.png" alt="Umber" />
+                </a>
+                <button class="hamburger hamburger--slider float-right" type="button">
+                    <span class="hamburger-box">
+                        <span class="hamburger-inner"></span>
+                    </span>
+                </button>
+            </div>
+        </div>
+        <nav class="navbar-mobile">
+            <div class="container-fluid">
+                <ul class="navbar-pull-list list-unstyled">
+                    <li class="has-dropdown">
+                        <a href="#">Users</a>
+
+                        <ul class="navbar-pull__dropdown list-unstyled">
+                            <li>
+                                <a href="index1.html">Service Providers</a>
+                            </li>
+                            <li>
+                                <a href="index2.html">Customers</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <!-- END HEADER MOBILE-->
+
+    <!-- PAGE PULL-->
+    <div class="page-pull pt-5">
+        <div class="recent-blog">
+            <div class="recent-blog__title-wrap clearfix m-b-60">
+                <h2 class="recent-blog__title float-right wow fadeInRight" data-wow-delay=".2s">Service Providers</h2>
+            </div>
+        </div>
+        <div class="cuscard text-primary bg-white mb-3 float-left col-md-3 p-3 mb-5">
+            <div class="card-icon col-md-3 float-left"><i class="icon-truck"></i></div>
+            <div class="col-md-8 float-right">
+                <h5 class="card-title">Transport</h5>
+                <p class="card-text">No of service providers registered as plumbers </p>
+            </div>
+        </div>
+        <div class="cuscard text-primary bg-white mb-3 float-left col-md-3 p-3 mb-5">
+            <div class="card-icon col-md-3 float-left"><i class="icon-t-shirt"></i></div>
+            <div class="col-md-8 float-right">
+                <h5 class="card-title">Laundry</h5>
+                <p class="card-text">No of service providers for laundry </p>
+            </div>
+        </div>
+        <div class="cuscard text-primary bg-white mb-3 float-left col-md-3 p-3 mb-5">
+            <div class="card-icon col-md-3 float-left"><i class="icon-shop"></i></div>
+            <div class="col-md-8 float-right">
+                <h5 class="card-title">Houskeeping</h5>
+                <p class="card-text">No of service providers for laundry </p>
+            </div>
+        </div>
+        <div class="cuscard text-primary bg-white mb-3 float-left col-md-3 p-3 mb-5">
+            <div class="card-icon col-md-3 float-left"><i class="icon-tv"></i></div>
+            <div class="col-md-8 float-right">
+                <h5 class="card-title">Electricians</h5>
+                <p class="card-text">No of service providers for laundry </p>
+            </div>
+        </div>
+        <div class="table-responsive">
+            <table class="table table-checkout pl-5 thinny">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>ID/Passport</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users">
+                        <td class=""><img src="assets/images/icon/freelancer-04.png" class="circle">
+                            <p><b>{{ user.name }}</b></p><span class="fas fa-map-marker-alt text-primary"></span><span class="pl-2">Syokimau</span></td>
+                        <td class=""> {{ user.email }} </td>
+                        <td class=""> {{ user.phone }} </td>
+                        <td class=""> {{ user.idcard }} </td>
+                        <th>
+                            <span class="fa fa-eye text-primary"></span>
+                            <span class="far fa-trash-alt ml-5 text-danger"></span>
+                        </th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!--   <div class="payment">
+                <form class="payment-form" method="POST">
+                    <div class="au-input-group au-input-checkbox">
+                        <input type="checkbox" checked>
+                        <span>check payment</span>
+                        <p>Please send a check to Store Name, Store Street, Store Town, Store State / County, Store Postcode.</p>
+                    </div>
+                    <div class="au-input-group au-input-checkbox">
+                        <input type="checkbox">
+                        <span>paypal</span>
+                        <div class="paypal-intro">
+                            <a href="#">
+                                <img src="images/icon/paypal.jpg" alt="PayPal">
+                            </a>
+                            <span>
+                                <a href="#">What is Paypal?</a>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+                <button class="au-btn au-btn--dark au-btn--p40 m-t-50" type="submit">place order</button>
+            </div> -->
+    </div>
+    <!-- END PAGE PULL-->
+</div>
