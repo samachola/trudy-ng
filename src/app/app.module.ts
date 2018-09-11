@@ -14,6 +14,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { AuthService } from './services/auth/auth.service';
 import { UsersService } from './services/users/users.service';
 import { PartnersService } from './services/partners/partners.service';
+import { CategoriesService } from './services/categories/categories.service';
 
 import { LandingComponent } from './components/landing/landing.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
@@ -22,6 +23,7 @@ import { HomeComponent } from './components/home/home.component';
 import { RequestsComponent } from './components/requests/requests.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AgmCoreModule } from '@agm/core';
+import { SettingsComponent } from './components/settings/settings.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -42,22 +44,24 @@ const routes: Routes = [
     MenuComponent,
     HomeComponent,
     RequestsComponent,
-    ProfileComponent
+    ProfileComponent,
+    SettingsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     FormsModule,
     RouterModule.forRoot(routes, { useHash: true }),
-		AgmCoreModule.forRoot({
-			apiKey: 'AIzaSyCi5s8s6hthogs8ch_fdtPLbOUFmZHGPso',
-			libraries: ['places'],
-		}),
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyCi5s8s6hthogs8ch_fdtPLbOUFmZHGPso',
+      libraries: ['places'],
+    }),
   ],
   providers: [
     AuthService,
     UsersService,
-		PartnersService
+    PartnersService,
+    CategoriesService
   ],
   bootstrap: [AppComponent]
 })

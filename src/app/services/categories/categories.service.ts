@@ -9,38 +9,26 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/observable/throw';
 
 @Injectable()
-export class PartnersService {
+export class CategoriesService {
   private apiBaseUrl: string = environment.apiBaseUrl;
 
   constructor(
     private http: HttpClient
   ) { }
 
-
   /**
-   * Get all partners
+   * Get all categories.
    *
-   * @returns {Observable} - Return list of users
+   * @return {Observable} - Available categories.
    */
-  getAllPartners() {
-    return this.http.get(`${this.apiBaseUrl}/partners`)
-                    .map(this.handleResponse)
-                    .catch(this.handleError);
-
-  }
-
-  /**
-   * Get filtered partners
-   * @param filter - filter params
-   * @returns {Observable} - List of filtered partners
-   */
-  getFilteredPartners(filter) {
-    return this.http.post(`${this.apiBaseUrl}/partners/filter`, filter)
+   getAllCategories() {
+    return this.http.get(`${this.apiBaseUrl}/categories`)
                     .map(this.handleResponse)
                     .catch(this.handleError);
   }
 
-  /**
+
+    /**
    * Handle response from server.
    *
    * @param {Response} res - response object
@@ -64,5 +52,5 @@ export class PartnersService {
     const message = error.error;
     return Observable.throw(message);
   }
-}
 
+}

@@ -42,51 +42,30 @@
                             </div>
 
                             <div class="number-wrap col-md-10 float-left">
-                                <h4 class="text-pink number js-counter-up" data-counterup-time="1000">30</h4>
+                                <h4 class="text-pink number js-counter-up" data-counterup-time="1000">{{availablePartners}}</h4>
                                 <h3 class="title">Partners available</h3>
                             </div>
                         </div>
                     </div>
-                    <form method="POST" class="col-md-7 float-left">
-                        <div class="col-md-3 float-left">
+                    <form class="col-md-7 float-left" #filterForm="ngForm">
+                        <div class="col-md-6 float-left">
                             <div class="au-input-group">
-                                <select class="form-control" id="exampleSelect1">
-                                    <option disabled="disabled">Select one</option>
-                                    <option>Electrical</option>
-                                    <option>Mechanical</option>
-                                    <option>Housekeeping</option>
-                                    <option>Errands</option>
-                                </select>
+                                <input type="text" class="form-control form-control-line" name="location" id="autocomplete" autocorrect="off" autocapitalize="off" spellcheck="off" #search>
                             </div>
                         </div>
 
                         <div class="col-md-3 float-left">
                             <div class="au-input-group">
-                                <select class="form-control" id="exampleSelect1">
-                                    <option disabled="disabled">Select one</option>
-                                    <option>Electrical</option>
-                                    <option>Mechanical</option>
-                                    <option>Housekeeping</option>
-                                    <option>Errands</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <div class="col-md-3 float-left">
-                            <div class="au-input-group">
-                                <select class="form-control" id="exampleSelect1">
-                                    <option disabled="disabled">Select one</option>
-                                    <option>Electrical</option>
-                                    <option>Mechanical</option>
-                                    <option>Housekeeping</option>
-                                    <option>Errands</option>
+                                <select class="form-control" (change)="onChange($event)" id="exampleSelect1">
+                                    <option disabled="disabled">Select Category</option>
+                                    <option *ngFor="let category of categories" [value]="category.id">{{category.name}}</option>
                                 </select>
                             </div>
                         </div>
 
 
                         <div class="col-md-3 float-left">
-                            <button type="button" class="mt-85 btn btn-primary">Find Pro</button>
+                            <button (click)="filterPatners()" type="button" class="mt-85 btn btn-primary">Find Pro</button>
                         </div>
                     </form>
                 </div>
@@ -107,7 +86,7 @@
                             <div class="sale-tag"><span class="icon-badge"></span></div>
                             <img src="assets/images/shop-01.jpg" alt="young lucy" />
                             <div class="tool-box">
-                                <a class="js-addcart" href="#">
+                                <a class="js-addcart" routerLink="/profile/{{partner.user_id}}">
                                     Request Service
                                 </a>
                                 <a routerLink="/profile/{{partner.user_id}}">
@@ -130,9 +109,9 @@
 
             </div>
 
-            <div class="see-more">
+            <!--div class="see-more">
                 <a class="au-btn au-btn--dark au-btn--p50 js-load-btn" href="#">see more</a>
-            </div>
+            </div-->
         </div>
     </section>
     <!-- END SHOP-->
