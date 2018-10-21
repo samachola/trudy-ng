@@ -339,17 +339,14 @@
                             <li *ngIf="!authenticated" class="list-inline-item has-dropdown">
                                 <a href="contact.html">How it works</a>
                             </li>
-                            <li class="list-inline-item has-dropdown">
-                                <a href="contact.html">Contact us</a>
-                            </li>
                             <li *ngIf="!authenticated" class="list-inline-item has-dropdown">
                                 <a routerLink="/login">Login</a>
                             </li>
                             <li *ngIf="authenticated" class="list-inline-item has-dropdown">
-                                <a routerLink="/profile/{{currentUser.id}}">My Profile</a>
+                                <a routerLink="/profile/{{currentUser.id}}">My Account</a>
                             </li>
                             <li *ngIf="authenticated" class="list-inline-item has-dropdown">
-                                <a routerLink="/login">Settings</a>
+                                <a routerLink="/settings">Settings</a>
                             </li>
                             <li class="list-inline-item has-dropdown">
                                 <a class="reqform" routerLink="/requests">Request Pro</a>
