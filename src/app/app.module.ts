@@ -15,6 +15,7 @@ import { AuthService } from './services/auth/auth.service';
 import { UsersService } from './services/users/users.service';
 import { PartnersService } from './services/partners/partners.service';
 import { CategoriesService } from './services/categories/categories.service';
+import { RequestsService } from './services/requests/requests.service';
 
 import { LandingComponent } from './components/landing/landing.component';
 import { DashboardComponent } from './components/admin/dashboard/dashboard.component';
@@ -62,7 +63,8 @@ const routes: Routes = [
     AuthService,
     UsersService,
     PartnersService,
-    CategoriesService
+    CategoriesService,
+    RequestsService
   ],
   bootstrap: [AppComponent]
 })

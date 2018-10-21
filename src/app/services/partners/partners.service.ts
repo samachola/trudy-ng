@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { HttpClient, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpResponse, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { environment } from '../../../environments/environment';
 
@@ -11,6 +11,7 @@ import 'rxjs/add/observable/throw';
 @Injectable()
 export class PartnersService {
   private apiBaseUrl: string = environment.apiBaseUrl;
+  private token = localStorage.getItem('token');
 
   constructor(
     private http: HttpClient
@@ -26,7 +27,19 @@ export class PartnersService {
     return this.http.get(`${this.apiBaseUrl}/partners`)
                     .map(this.handleResponse)
                     .catch(this.handleError);
+  }
 
+  /**
+   * Get partner details
+   *
+   * @param {integer} id - User id
+   *
+   * @returns {Observable} - Partner details
+   */
+  getPatnerDetails(id) {
+    return this.http.get(`${this.apiBaseUrl}/partners/${id}`)
+                    .map(this.handleResponse)
+                    .catch(this.handleError);
   }
 
   /**
@@ -36,6 +49,22 @@ export class PartnersService {
    */
   getFilteredPartners(filter) {
     return this.http.post(`${this.apiBaseUrl}/partners/filter`, filter)
+                    .map(this.handleResponse)
+                    .catch(this.handleError);
+  }
+
+  /**
+   * Update partner detials
+   *
+   * @param partner - partner details.
+   * @param partnerId - Partner id.
+   *
+   * @returns {Observable}
+   */
+  updatePartnerDetails(partner, partnerId) {
+    const headers = new HttpHeaders().set('token', this.token);
+
+    return this.http.put(`${this.apiBaseUrl}/partners/${partnerId}`, partner, {headers})
                     .map(this.handleResponse)
                     .catch(this.handleError);
   }

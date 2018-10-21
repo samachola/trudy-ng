@@ -2,6 +2,8 @@ import { Component, OnInit, OnDestroy, Input, ViewChild, ElementRef, NgZone } fr
 import { ActivatedRoute } from '@angular/router';
 import { UsersService } from '../../services/users/users.service';
 import { MapsAPILoader } from '@agm/core';
+import { CategoriesService } from '../../services/categories/categories.service';
+import { RequestsService } from '../../services/requests/requests.service';
 import {} from '@types/googlemaps';
 
 @Component({
@@ -21,13 +23,22 @@ export class ProfileComponent implements OnInit, OnDestroy {
   currentUser = false;
   lat = 51.678418;
   lng = 7.809007;
+  categories: any;
+  category: number;
+  date: any;
+  time: any;
+  description: any;
+  loggedInUser: any;
+  requests: any;
 
   @ViewChild('search' ) public searchElement: ElementRef;
   constructor(
     private route: ActivatedRoute,
     private userService: UsersService,
     private mapsAPILoader: MapsAPILoader,
-    private ngZone: NgZone) { }
+    private ngZone: NgZone,
+    private categoriesService: CategoriesService,
+    private requestsService: RequestsService) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
@@ -36,12 +47,16 @@ export class ProfileComponent implements OnInit, OnDestroy {
                       .toPromise()
                       .then(res => {
                         this.user = res;
-                        const loggedInUser = JSON.parse(localStorage.getItem('user'));
-                        this.currentUser = (this.user.id === loggedInUser.id) ? true : false;
+                        console.log({user: this.user});
+                        this.loggedInUser = JSON.parse(localStorage.getItem('user'));
+                        this.currentUser = (this.user.id === this.loggedInUser.id) ? true : false;
                       })
                       .catch(err => console.log(err));
 
     });
+
+    this.getCategories();
+    this.getRequests();
 
     this.profile = true;
     this.mapsAPILoader.load().then(
@@ -88,6 +103,67 @@ export class ProfileComponent implements OnInit, OnDestroy {
         this.timeline = false;
         this.profile = true;
     }
+  }
+
+  /**
+   * Get all Categories.
+   *
+   * @return {Array} - List of categories.
+   */
+  getCategories() {
+    this.categoriesService.getAllCategories()
+                          .toPromise()
+                          .then(res => this.categories = res)
+                          .catch(err => console.log(err));
+  }
+
+  getRequests() {
+    this.requestsService.getAllRequests()
+                        .toPromise()
+                        .then((res) => {
+                          this.requests = res.filter(resp => resp.partner_id === this.user.id);
+                          console.table(this.requests);
+                        })
+                        .catch(err => console.log(err));
+  }
+
+  /**
+   * Set select dropdown value.
+   * @param event - select dropdown onchange event.
+   */
+  public onChange(event): void {
+    this.category = event.target.value;
+  }
+
+  /**
+   * Set date value.
+   * @param event - set date event.
+   */
+  public onDateChange(event): void {
+    this.date = event.target.value;
+  }
+
+  /**
+   * request Pro Services
+   */
+  requestPro() {
+    const request = {
+      date: this.date,
+      category_id: this.category,
+      client_email: this.loggedInUser.email,
+      partner_id: this.user.id
+    };
+
+    console.log(request);
+
+    this.requestsService.requestPro(request)
+                        .toPromise()
+                        .then((res) => {
+                          if (res) {
+                            window.location.reload();
+                          }
+                        })
+                        .catch(err => console.log(err));
   }
 
   ngOnDestroy() {
