@@ -5,7 +5,7 @@
             <div class="row header__content">
 
                 <div class="col-md-1 logo-wrap">
-                    <a href="index.html" class="col-md-12">
+                    <a  routerLink="/" class="col-md-12">
                         <img src="assets/images/icon/logo-black.png" alt="" />
                     </a>
                 </div>
@@ -48,7 +48,6 @@
                                                       </span>
                                                         <span class="col-10 float-left">
                                                           <b href="">Cleaning</b>
-                                                          <p>Sed ut perspiciatis unde </p>
                                                       </span>
                                                     </a>
                                                 </li>
@@ -92,7 +91,6 @@
                                                       </span>
                                                         <span class="col-10 float-left">
                                                           <b href="">Laundry</b>
-                                                          <p>Sed ut perspiciatis unde </p>
                                                       </span>
                                                     </a>
                                                 </li>
@@ -152,7 +150,6 @@
                                                       </span>
                                                         <span class="col-10 float-left">
                                                           <b href="">Electricians</b>
-                                                          <p>Sed ut perspiciatis unde </p>
                                                       </span>
                                                     </a>
                                                 </li>
@@ -193,7 +190,6 @@
                                                       </span>
                                                         <span class="col-10 float-left">
                                                           <b href="">Plumbers</b>
-                                                          <p>Sed ut perspiciatis unde </p>
                                                       </span>
                                                     </a>
                                                 </li>
@@ -235,7 +231,6 @@
                                                       </span>
                                                         <span class="col-10 float-left">
                                                           <b href="">Mechanics</b>
-                                                          <p>Sed ut perspiciatis unde </p>
                                                       </span>
                                                     </a>
                                                 </li>
@@ -286,7 +281,6 @@
                                                       </span>
                                                         <span class="col-10 float-left">
                                                           <b href="">Repairs</b>
-                                                          <p>Sed ut perspiciatis unde </p>
                                                       </span>
                                                     </a>
                                                 </li>
@@ -318,7 +312,6 @@
                                                       </span>
                                                         <span class="col-10 float-left">
                                                           <b href="">Errands/Deliveries</b>
-                                                          <p>Sed ut perspiciatis unde </p>
                                                       </span>
                                                     </a>
                                                 </li>
@@ -326,8 +319,7 @@
                                                     <a href="login.html">
                                                         <span class="col-10 float-left">
                                                           <b>View All Services</b>
-                                                          <p class="text-white">Sed ut perspiciatis unde omnis</p>
-                                                      </span>
+                                                        </span>
                                                         <span class="icon-arrow-right2 flo"></span>
                                                     </a>
                                                 </li>
@@ -339,9 +331,6 @@
                             <li *ngIf="!authenticated" class="list-inline-item has-dropdown">
                                 <a href="contact.html">How it works</a>
                             </li>
-                            <li *ngIf="!authenticated" class="list-inline-item has-dropdown">
-                                <a routerLink="/login">Login</a>
-                            </li>
                             <li *ngIf="authenticated" class="list-inline-item has-dropdown">
                                 <a routerLink="/profile/{{currentUser.id}}">My Account</a>
                             </li>
@@ -349,7 +338,15 @@
                                 <a routerLink="/settings">Settings</a>
                             </li>
                             <li class="list-inline-item has-dropdown">
-                                <a class="reqform" routerLink="/requests">Request Pro</a>
+                                <a routerLink="/requests">Request Pro</a>
+                            </li>
+
+                            <li *ngIf="!authenticated" class="list-inline-item has-dropdown">
+                                <a class="reqform" routerLink="/login">Make Money</a>
+                            </li>
+
+                            <li *ngIf="!authenticated" class="list-inline-item has-dropdown">
+                                <a routerLink="/login">Login</a>
                             </li>
                         </ul>
                     </nav>
@@ -359,7 +356,6 @@
                         <h6 (click)="logout()">{{currentUser.name}} <a routerLink="/login" class="">Sign Out</a></h6>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
