@@ -30,6 +30,17 @@ export class PartnersService {
   }
 
   /**
+   * create new partner
+   *
+   * @returns {Observable}
+   */
+  createNewPartner(newPartner) {
+    return this.http.post(`${this.apiBaseUrl}/partners`, newPartner)
+                    .map(this.handleResponse)
+                    .catch(this.handleError);
+  }
+
+  /**
    * Get partner details
    *
    * @param {integer} id - User id

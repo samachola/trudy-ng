@@ -25,6 +25,8 @@ import { RequestsComponent } from './components/requests/requests.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { AgmCoreModule } from '@agm/core';
 import { SettingsComponent } from './components/settings/settings.component';
+import { ClientRegistrationComponent } from './components/client-registration/client-registration.component';
+import { PartnerRegistrationComponent } from './components/partner-registration/partner-registration.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -33,6 +35,8 @@ const routes: Routes = [
   { path: 'requests', component: RequestsComponent },
   { path: 'profile/:id', component: ProfileComponent },
   { path: 'settings', component: SettingsComponent },
+  { path: 'client', component: ClientRegistrationComponent },
+  { path: 'partner', component: PartnerRegistrationComponent },
 ];
 @NgModule({
   declarations: [
@@ -47,7 +51,9 @@ const routes: Routes = [
     HomeComponent,
     RequestsComponent,
     ProfileComponent,
-    SettingsComponent
+    SettingsComponent,
+    ClientRegistrationComponent,
+    PartnerRegistrationComponent
   ],
   imports: [
     BrowserModule,

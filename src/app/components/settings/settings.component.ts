@@ -20,7 +20,7 @@ export class SettingsComponent implements OnInit {
   isPartner: boolean;
   partnerDetails = {};
 
-  @ViewChild('search' ) public searchElement: ElementRef;
+  @ViewChild('search') public searchElement: ElementRef;
   constructor(
     private categoriesService: CategoriesService,
     private partnerService: PartnersService,
@@ -82,13 +82,13 @@ export class SettingsComponent implements OnInit {
    */
   checkIsPartner(id) {
     this.partnerService.getPatnerDetails(id)
-                       .toPromise()
-                       .then((res) => {
-                         this.partner = res;
-                         this.isPartner = true;
-                         console.log(this.partner);
-                        })
-                       .catch(err => console.log(err));
+                      .toPromise()
+                      .then((res) => {
+                        this.partner = res;
+                        this.isPartner = true;
+                        console.log(this.partner);
+                      })
+                      .catch(err => console.log(err));
   }
 
   /**

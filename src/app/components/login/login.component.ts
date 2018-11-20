@@ -32,6 +32,10 @@ export class LoginComponent implements OnInit {
              });
   }
 
+  goToPartners() {
+    this.router.navigate(['partner']);
+  }
+
   validateEntries(data) {
     let message;
     if (!data.email || !data.password) {

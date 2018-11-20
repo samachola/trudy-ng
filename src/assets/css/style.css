@@ -1,3 +1,61 @@
+.logo-wrap a img {
+    width: 67px !important;
+}
+
+.nav-header>ul>li>a {
+    font-weight: 100 !important;
+}
+
+.cta {
+    display: grid;
+}
+
+.cta a {
+    align-self: center;
+    color: #ffffff;
+    font-family: 'Catamaran', sans-serif;
+    font-weight: 700;
+    padding: .6em 1em;
+    border-radius: 8px;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(to right, rgb(0, 205, 253), rgba(199, 27, 135, 0.8));
+    letter-spacing: .2em;
+    transition: background .8s ease-in-out;
+    transition: border .4s ease-in-out;
+}
+
+.cta a:hover {
+    background: none;
+    border: 2px solid #00cdfd;
+    font-weight: 100;
+}
+
+.loggedin {
+    display: grid;
+    grid-template-columns: 50px auto;
+    background: none !important;
+    grid-gap: 5px;
+}
+
+.loggedin .profile,
+.loggedin h6 {
+    align-self: center;
+}
+
+.loggedin h6 {
+    color: #FFF;
+    font-size: .8em;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 2px;
+}
+
+.loggedin h6 a {
+    font-weight: 100;
+    color: #00cdfd
+}
+
 .tr-home {
     width: 100%;
     margin: 0 auto;
@@ -229,4 +287,36 @@
 .tr-para .para-over .testimonial .testimony h4 {
     color: #00cdfd;
     font-weight: 500;
+}
+
+#buton {
+    position: absolute;
+    z-index: 9;
+    opacity: 1;
+    border: #593b9a 2px solid;
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    border-radius: 5px;
+    line-height: 43px;
+    background: #593b9a;
+    bottom: 0;
+    left: calc(55% - 4.8vh);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    color: #fff;
+}
+
+.register select {
+    min-width: 400px;
+    height: 3em;
+    border: 2px solid #b3eeff;
+    color: #fff;
+}
+
+.register .au-input {
+    color: #fff !important;
+}
+
+section {
+    overflow: scroll !important;
 }

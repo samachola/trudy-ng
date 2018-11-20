@@ -33,6 +33,7 @@ export class AuthService {
    * @return {Object}
    */
   register(userData) {
+    console.table(userData);
     return this.http
       .post(`${this.apiBaseUrl}/auth/register`, userData)
       .map(this.handleResponse)

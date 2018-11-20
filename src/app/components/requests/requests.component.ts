@@ -18,6 +18,7 @@ export class RequestsComponent implements OnInit {
   lat: number;
   lng: number;
   availablePartners: number;
+  partnersText = 'partners';
 
   @ViewChild('search' ) public searchElement: ElementRef;
   constructor(
@@ -34,7 +35,6 @@ export class RequestsComponent implements OnInit {
                   .then((res) => {
                     this.partners = res;
                     this.availablePartners = res.length;
-                    console.table(this.partners);
                   })
                   .catch(err => console.log(err));
 
@@ -78,6 +78,7 @@ export class RequestsComponent implements OnInit {
                         .then((res) => {
                           this.partners = res;
                           this.availablePartners = res.length;
+                          this.partnersText = this.getFilteredCategory();
                         })
                         .catch(err => console.log(err));
   }
@@ -86,8 +87,17 @@ export class RequestsComponent implements OnInit {
   getCategories() {
     this.categoriesService.getAllCategories()
                   .toPromise()
-                  .then(res => this.categories = res)
+                  .then(res => {
+                    this.categories = res;
+                    console.log(res);
+                  })
                   .catch(err => console.log(err));
+  }
+
+  getFilteredCategory() {
+    console.log(this.categories);
+    const filteredCategory = this.categories.filter((category) => this.category === category.id);
+    return 'filteredCategory.name';
   }
 
 }

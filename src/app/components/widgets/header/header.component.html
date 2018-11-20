@@ -4,15 +4,18 @@
         <div class="section__content section__content--w1760">
             <div class="row header__content">
 
-                <div class="col-md-1 logo-wrap">
-                    <a  routerLink="/" class="col-md-12">
+                <div class="col-md-2 logo-wrap">
+                    <a routerLink="/" class="col-md-12">
                         <img src="assets/images/icon/logo-black.png" alt="" />
                     </a>
                 </div>
-                <div class="col-md-9 ml-auto">
+                <div class="col-md-7 ml-auto">
                     <nav class="nav-header col-md-9">
                         <ul class="list-unstyled list-inline">
-                            <li class="list-inline-item has-mega">
+                            <li class="list-inline-item has-dropdown">
+                                <a routerLink="/">Home</a>
+                            </li>
+                            <!-- <li class="list-inline-item has-mega">
                                 <a href="#">Services</a>
                                 <div class="mega-menu">
                                     <div class="row no-gutters">
@@ -22,7 +25,6 @@
                                                 <li>
                                                     <a routerLink="/requests">
                                                         <span class="col-2 float-left">
-                                                          <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                                           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
                                                           <g>
@@ -54,7 +56,6 @@
                                                 <li>
                                                     <a routerLink="/requests">
                                                         <span class="col-2 float-left">
-                                                          <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                                           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
                                                           <g>
@@ -97,7 +98,6 @@
                                                 <li>
                                                     <a routerLink="/requests">
                                                         <span class="col-2 float-left">
-                                                          <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                                           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
                                                           <g>
@@ -156,7 +156,7 @@
                                                 <li>
                                                     <a routerLink="/requests">
                                                         <span class="col-2 float-left">
-                                                          <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
                                                           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
                                                           <g>
@@ -201,7 +201,6 @@
                                                 <li>
                                                     <a routerLink="/requests">
                                                         <span class="col-2 float-left">
-                                                          <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                                           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
                                                           <g>
@@ -237,7 +236,6 @@
                                                 <li>
                                                     <a href="request.html">
                                                         <span class="col-2 float-left">
-                                                          <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
                                                           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
                                                           <g>
@@ -287,7 +285,7 @@
                                                 <li>
                                                     <a routerLink="/requests">
                                                         <span class="col-2 float-left">
-                                                          <!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+
                                                           <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                                                                viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
                                                           <g>
@@ -315,25 +313,15 @@
                                                       </span>
                                                     </a>
                                                 </li>
-                                                <li class="alle">
-                                                    <a href="login.html">
-                                                        <span class="col-10 float-left">
-                                                          <b>View All Services</b>
-                                                        </span>
-                                                        <span class="icon-arrow-right2 flo"></span>
-                                                    </a>
-                                                </li>
+
                                             </ul>
                                         </div>
                                     </div>
                                 </div>
-                            </li>
-                            <li *ngIf="!authenticated" class="list-inline-item has-dropdown">
-                                <a href="contact.html">How it works</a>
-                            </li>
-                            <li *ngIf="authenticated" class="list-inline-item has-dropdown">
+                            </li> -->
+                            <!-- <li *ngIf="authenticated" class="list-inline-item has-dropdown">
                                 <a routerLink="/profile/{{currentUser.id}}">My Account</a>
-                            </li>
+                            </li> -->
                             <li *ngIf="authenticated" class="list-inline-item has-dropdown">
                                 <a routerLink="/settings">Settings</a>
                             </li>
@@ -341,8 +329,8 @@
                                 <a routerLink="/requests">Request Pro</a>
                             </li>
 
-                            <li *ngIf="!authenticated" class="list-inline-item has-dropdown">
-                                <a class="reqform" routerLink="/login">Make Money</a>
+                            <li class="list-inline-item has-dropdown">
+                                <a href="#">About</a>
                             </li>
 
                             <li *ngIf="!authenticated" class="list-inline-item has-dropdown">
@@ -352,9 +340,13 @@
                     </nav>
 
                     <div *ngIf="authenticated" class="search-btn-wrap col-md-3 loggedin">
-                        <div class="col-md-4"> <img src="assets/images/pro.jpg" class="rounded-circle" width=""></div>
-                        <h6 (click)="logout()">{{currentUser.name}} <a routerLink="/login" class="">Sign Out</a></h6>
+                        <div class="profile"><img src="assets/images/pro.jpg" class="rounded-circle" width=""></div>
+                        <h6 (click)="logout()">{{currentUser.name}} | <a routerLink="/login">Sign Out</a></h6>
                     </div>
+                </div>
+
+                <div class="col-md-3 cta" *ngIf="!authenticated">
+                    <a routerLink="/partner" class="join">Make money</a>
                 </div>
             </div>
         </div>
@@ -430,7 +422,6 @@
                               </span>
                                 <span class="col-10 float-left">
                                   <b href="">Cleaning</b>
-                                  <p>Sed ut perspiciatis unde </p>
                               </span>
                             </a>
                         </li>
