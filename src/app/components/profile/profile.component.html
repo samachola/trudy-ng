@@ -24,10 +24,10 @@
                         </div>
 
                         <div class="form-group">
-                          <label class="col-md-12 p-0">Date *</label>
-                          <div class="col-md-12 p-0">
-                              <input type="date" class="form-control form-control-line" name="date" value="{{date}}" (change)="onDateChange($event)" required />
-                          </div>
+                            <label class="col-md-12 p-0">Date *</label>
+                            <div class="col-md-12 p-0">
+                                <input type="date" class="form-control form-control-line" name="date" value="{{date}}" (change)="onDateChange($event)" required />
+                            </div>
                         </div>
 
                         <div class="form-group">
@@ -65,7 +65,7 @@
         <div class="page-breadcrumb">
             <div class="row">
                 <div class="col-5 align-self-center">
-                    <h4 class="page-title">My Profile</h4>
+                    <h4 class="page-title">Service Provider</h4>
                     <div class="d-flex align-items-center">
 
                     </div>
@@ -75,7 +75,7 @@
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item">
-                                    <a routerLink="/requests">back to providers</a>
+                                    <a routerLink="/requests">back</a>
                                 </li>
                             </ol>
                         </nav>
@@ -102,7 +102,7 @@
                             <a *ngIf="currentUser" href="" rel="tooltip" class="tooly" data-toggle="tooltip" data-placement="bottom" title="Edit details">
                                 <span class="icon-pencil"></span>
                             </a>
-                            <div class="m-t-30">
+                            <div class="m-t-30 profile">
                                 <img src="assets/images/pro.jpg" class="rounded-circle" width="100" />
                                 <h4 class="card-title m-t-10">{{user.name}}</h4>
                                 <p class="card-subtitle">Errands Pro</p>
@@ -127,7 +127,8 @@
                             </div>
                         </div>
                         <div>
-                            <hr> </div>
+                            <hr>
+                        </div>
 
                         <div class="card-body">
                             <a *ngIf="currentUser" href="" rel="tooltip" class="tooly" data-toggle="tooltip" data-placement="bottom" title="Edit details">
@@ -137,43 +138,6 @@
                             <p class="text-muted">{{user.email}}</p>
                             <h6 class="p-t-30 db">Phone</h6>
                             <p class="text-muted">{{user.phone}}</p>
-
-                        </div>
-                        <hr>
-                        <div class="card-body">
-                            <h6 class="font-medium m-t-30">My Skills</h6>
-                            <a *ngIf="currentUser" href="" rel="tooltip" class="tooly" data-toggle="tooltip" data-placement="bottom" title="Edit details">
-                                <span class="icon-pencil"></span>
-                            </a>
-                            <div class="col-12 m-t-30 skkll">
-                                <span class="pull-left skillcol lau"></span>
-                                <h5 class="pull-left">Laundry </h5>
-                            </div>
-
-                            <div class="col-12 m-t-30 skkll">
-                                <span class="pull-left skillcol errands"></span>
-                                <h5 class="pull-left">Errands </h5>
-                            </div>
-                            <div class="col-12 m-t-30 skkll">
-                                <span class="pull-left skillcol elect"></span>
-                                <h5 class="pull-left">Electrician </h5>
-                            </div>
-
-                            <div class="col-12 m-t-30 skkll">
-                                <span class="pull-left skillcol cleaning"></span>
-                                <h5 class="pull-left">Errands </h5>
-                            </div>
-
-                            <div class="col-12 m-t-30 skkll">
-                                <span class="pull-left skillcol plumbing"></span>
-                                <h5 class="pull-left">Laundry </h5>
-                            </div>
-
-                            <div class="col-12 m-t-30 skkll">
-                                <span class="pull-left skillcol nanny"></span>
-                                <h5 class="pull-left">Errands </h5>
-                            </div>
-
 
                         </div>
                     </div>
@@ -219,18 +183,7 @@
                                             <p class="text-muted">Naivasha</p>
                                         </div>
                                     </div>
-                                    <hr>
-                                    <h6 class="font-medium m-t-30">About Me</h6>
-                                    <p class="m-t-30">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus
-                                        elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
-                                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it
-                                        to make a type specimen book. It has survived not only five centuries </p>
-                                    <p>It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                                    <div class="sociale col-12 p-0">
-                                        <button class="btn btn-circle"><i class="fab fa-facebook-f"></i></button>
-                                        <button class="btn btn-circle"><i class="fab fa-twitter"></i></button>
-                                        <button class="btn btn-circle"><i class="fab fa-youtube"></i></button>
-                                    </div>
+
                                     <div class="map-box">
                                         <hr>
                                         <h6 class="p-t-30 db">Location</h6>
@@ -244,33 +197,33 @@
                             </div>
                             <div *ngIf="timeline" class="tab-pane show active" role="tabpanel" aria-labelledby="pills-timeline-tab">
                                 <div class="card-body">
-                                  <div class="sociale col-12 p-0">
-                                          <div *ngFor="let request of requests" class="profiletimeline m-t-0">
+                                    <div class="sociale col-12 p-0">
+                                        <div *ngFor="let request of requests" class="profiletimeline m-t-0">
                                             <div class="sl-item col-md-12 p-0 float-left">
-                                              <div class="card-body">
+                                                <div class="card-body">
                                                     <div class="sl-left col-md-4 clientel">
-                                                      <img src="assets/images/pro.jpg" alt="user" class="rounded-circle"/>
-                                                      <h6 class="card-title m-t-10">{{user.name}}</h6>
-                                                      <p class="card-subtitle">Pro</p>
+                                                        <img src="assets/images/pro.jpg" alt="user" class="rounded-circle" />
+                                                        <h6 class="card-title m-t-10">{{user.name}}</h6>
+                                                        <p class="card-subtitle">Pro</p>
                                                     </div>
                                                     <div class="sl-left col-md-4 pror">
-                                                      <img src="assets/images/client.jpg" alt="user" class="rounded-circle"/>
-                                                      <h6 class="card-title m-t-10">{{request.client_email}}</h6>
-                                                      <p class="card-subtitle">Customer</p>
+                                                        <img src="assets/images/client.jpg" alt="user" class="rounded-circle" />
+                                                        <h6 class="card-title m-t-10">{{request.client_email}}</h6>
+                                                        <p class="card-subtitle">Customer</p>
                                                     </div>
 
                                                     <div class="sl-right col-md-2">
-                                                                <span class="badge badge-primary">Complete</span>
-                                                                <span class="badge badge-primary">PAID</span>
-                                                        </div>
+                                                        <span class="badge badge-primary">Complete</span>
+                                                        <span class="badge badge-primary">PAID</span>
                                                     </div>
-                                                    <div class="like-comm col-md-12">
-                                                        <a href="javascript:void(0)" class="link m-r-10 float-right">Cancel</a>
-                                                        <a href="javascript:void(0)" class="link m-r-10 float-right">Complete</a>
-                                                     </div>
+                                                </div>
+                                                <div class="like-comm col-md-12">
+                                                    <a href="javascript:void(0)" class="link m-r-10 float-right">Cancel</a>
+                                                    <a href="javascript:void(0)" class="link m-r-10 float-right">Complete</a>
                                                 </div>
                                             </div>
-                                          </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

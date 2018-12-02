@@ -320,3 +320,12 @@
 section {
     overflow: scroll !important;
 }
+
+.profile {
+    display: grid;
+    text-align: center;
+}
+
+.profile img {
+    justify-self: center;
+}

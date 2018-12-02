@@ -4,6 +4,7 @@ import { UsersService } from '../../services/users/users.service';
 import { MapsAPILoader } from '@agm/core';
 import { CategoriesService } from '../../services/categories/categories.service';
 import { RequestsService } from '../../services/requests/requests.service';
+import { PartnersService } from '../../services/partners/partners.service';
 import {} from '@types/googlemaps';
 
 @Component({
@@ -21,8 +22,8 @@ export class ProfileComponent implements OnInit, OnDestroy {
   private sub: any;
   user: any;
   currentUser = false;
-  lat = 51.678418;
-  lng = 7.809007;
+  lat = -1.2921;
+  lng = 36.8219;
   categories: any;
   category: number;
   date: any;
@@ -38,7 +39,8 @@ export class ProfileComponent implements OnInit, OnDestroy {
     private mapsAPILoader: MapsAPILoader,
     private ngZone: NgZone,
     private categoriesService: CategoriesService,
-    private requestsService: RequestsService) { }
+    private requestsService: RequestsService,
+    private partnerService: PartnersService) { }
 
   ngOnInit() {
     this.sub = this.route.params.subscribe(params => {
@@ -47,11 +49,12 @@ export class ProfileComponent implements OnInit, OnDestroy {
                       .toPromise()
                       .then(res => {
                         this.user = res;
-                        console.log({user: this.user});
                         this.loggedInUser = JSON.parse(localStorage.getItem('user'));
                         this.currentUser = (this.user.id === this.loggedInUser.id) ? true : false;
                       })
                       .catch(err => console.log(err));
+
+      this.getUserLocation(this.id);
 
     });
 
@@ -59,23 +62,6 @@ export class ProfileComponent implements OnInit, OnDestroy {
     this.getRequests();
 
     this.profile = true;
-    this.mapsAPILoader.load().then(
-      () => {
-        const autocomplete = new google.maps.places.Autocomplete(this.searchElement.nativeElement, { types: ['address']});
-        autocomplete.addListener('place_changed', () => {
-          this.ngZone.run(() => {
-            const place: google.maps.places.PlaceResult = autocomplete.getPlace();
-            console.log(JSON.stringify(place.geometry.location));
-            this.lat = place.geometry.location.lat();
-            this.lng = place.geometry.location.lng();
-
-            if (place.geometry === undefined || place.geometry === null) {
-              return;
-            }
-          });
-        });
-      }
-    );
   }
 
   tab(state) {
@@ -127,6 +113,17 @@ export class ProfileComponent implements OnInit, OnDestroy {
                         .catch(err => console.log(err));
   }
 
+  getUserLocation(id) {
+    this.partnerService.getPatnerDetails(id)
+                        .toPromise()
+                        .then(res => {
+                          this.lat = res.lat;
+                          this.lng = res.lng;
+                          console.log(this.lat, this.lng);
+                        })
+                        .catch(err => console.log(err));
+  }
+
   /**
    * Set select dropdown value.
    * @param event - select dropdown onchange event.
@@ -153,8 +150,6 @@ export class ProfileComponent implements OnInit, OnDestroy {
       client_email: this.loggedInUser.email,
       partner_id: this.user.id
     };
-
-    console.log(request);
 
     this.requestsService.requestPro(request)
                         .toPromise()
